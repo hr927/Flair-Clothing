@@ -1,0 +1,21 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+  }
+#hdnt{
+    text-align: center;
+    font-size: 30px;
+    color: rgb(71, 70, 70);
+    font-family: Arial;
+    margin-bottom: 40px;
+
+}
+#h1{
+    width: 82%;
+    height: auto;
+    margin: auto;
+display: flex;  
+justify-content: space-between;
+ 
+}
