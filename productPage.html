@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <title>Document</title>
+    <link rel="stylesheet" href="./Styles/productPage.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div id="navbar"></div>
+    <div id="top">
+        <p>Women Home</p>
+        <h1>22% OFF YOUR NEW WARDROBE</h1>
+        <p>You can now shop the world's most iconic designers with 22% off, for a limited time only. T&Cs apply; read them <a href="#"> here.</a></span></p>
+    </div>
+    <div id="btn">
+        <a href="#" id="women_btn">SHOP WOMEN</a>
+        <a href="#" id="men_btn">SHOP MEN</a>
+    </div>
+    <div id="sort">
+        <h4>Filter</h4>
+        <ul>
+            <li><a href="#" id="sort_btn">Sort by<i id="i" class="fa fa-chevron-down"></i></a>
+                <div id="sub">
+                    <a href="#"><option value="op">Our Pick</option></a>
+                    <a href="#"><option value="nf">New First</option></a>
+                    <a href="#"><option value="hl">Price high to low</option></a>
+                    <a href="#"><option value="lh">Price low to high</option></a>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div id="main">
+        <div id="category">
+            <button class="accordion">Category <i id="i2" class="fa fa-chevron-down"></i></button>
+            <div class="panel">
+            <a href="#">Accessories</a>
+            <a href="#">Activewear</a>
+            <a href="#">Bags</a>
+            <a href="#">Clothing</a>
+            <a href="#">Home</a>
+            <a href="#">Jewelry</a>
+            <a href="#">Pre-Owned</a>
+            <a href="#">Shoes</a>
+            </div>
+
+            <button class="accordion">Brand <i id="i2" class="fa fa-chevron-down"></i></button>
+            <div class="panel">
+            <div>
+                <i class="fa fa-search"></i><input type="text" id="brand_inp" placeholder="Search 1821 brands">
+            </div>
+            <div id="scroll">
+                <input type="checkbox"><p>A BATHING APE</p>
+                <input type="checkbox"><p>A BETTER MISTAKE</p>
+                <input type="checkbox"><p>A-COLD-WALL</p>
+                <input type="checkbox"><p>A. ROEGE</p>
+                <input type="checkbox"><p>A.A. Spectrum</p>
+                <input type="checkbox"><p>A.EMERY</p>
+                <input type="checkbox"><p>A.L.C.</p>
+                <input type="checkbox"><p>A.P.C.</p>
+                <input type="checkbox"><p>AC9</p>
+                <input type="checkbox"><p>AAPE BY APE</p>
+                <input type="checkbox"><p>AERON</p>
+            </div>
+            </div>
+
+            <button class="accordion">Color <i id="i2" class="fa fa-chevron-down"></i></button>
+            <div class="panel">
+                <div id="col"><i class="fa fa-circle fa-2x" aria-hidden="true"></i><h4>Black</h4></div>
+                <div id="col"><i class="fa fa-circle fa-2x" aria-hidden="true"></i><h4>Blue</h4></div>
+                <div id="col"><i class="fa fa-circle fa-2x" aria-hidden="true"></i><h4>Brown</h4></div>
+                <div id="col"><i class="fa fa-circle fa-2x" aria-hidden="true"></i><h4>Gold</h4></div>
+                <div id="col"><i class="fa fa-circle fa-2x" aria-hidden="true"></i><h4>Green</h4></div>
+                <div id="col"><i class="fa fa-circle fa-2x" aria-hidden="true"></i><h4>Grey</h4></div>
+                <div id="col"><i class="fa fa-circle fa-2x" aria-hidden="true"></i><h4>Orange</h4></div>
+                <div id="col"><i class="fa fa-circle fa-2x" aria-hidden="true"></i><h4>Red</h4></div>
+                <div id="col"><i class="fa fa-circle fa-2x" aria-hidden="true"></i><h4>Pink</h4></div>
+                <div id="col"><i class="fa fa-circle fa-2x" aria-hidden="true"></i><h4>Purple</h4></div>
+            </div>
+
+            <button class="accordion">Price <i id="i2" class="fa fa-chevron-down"></i></button>
+            <div class="panel">
+                <div class="slidecontainer">
+                    <p><span id="demo"></span><span>$</span></p>
+                    <input type="range" min="600" max="42000" value="50" class="slider" id="myRange">
+                </div>
+                
+            </div>
+
+            <button class="accordion">Conscious <i id="i2" class="fa fa-chevron-down"></i></button>
+            <div class="panel">
+            <p>Lorem ipsum...</p>
+            </div>
+        </div>
+        <div id="items"></div>
+    </div>
+    <script src="./Scripts/productPage.js"></script>
+</body>
+</html>
