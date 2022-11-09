@@ -1,0 +1,159 @@
+
+*{
+    /* font-family: Arial, Helvetica, sans-serif; */
+    
+}
+#section1{
+    width:90%;
+    height: 550px;
+    display: flex;
+    text-align: center;
+    margin-bottom: 50px;
+    margin: auto;
+}
+#section1>div{
+    width:45%;
+     margin:auto;
+    font-size: 25px;
+   
+}
+#section1>div>img{
+    width:90%;
+   
+}
+#section1>div>h1{
+    font-size: 60px;
+}
+#section1>div>button{
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 8px;
+    padding: 10px;
+    background: transparent;
+}
+#section2{
+    width:90%;
+    height: 600px;
+    display: flex;
+    margin: auto;
+    margin-bottom: 50px;
+}
+#section2>div{
+    width:45%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+     margin:auto;
+     font-size: 18px;
+     text-align: center;
+     
+}
+#section2>div>img{
+    width:90%;
+    height: 90%;
+}
+#section2>div>div>h3{
+    font-size: 30px;
+    font-weight: lighter;
+}
+#section2>div>div>button{
+    font-size: 18px;
+    border-radius: 8px;
+    font-weight: bold;
+    padding: 10px;
+    background: transparent;
+}
+#section3{
+    width:90%;
+    height: 550px;
+    display: flex;
+    margin: auto;
+    margin-bottom: 200px;
+   
+}
+#section3>div{
+    width: 49%;
+     margin:auto;
+     font-size: 15px;
+}
+#section3>div:nth-child(1)>img{
+    width: 100%;
+}
+#img1{
+    height:120%;
+    width:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0,0,0,0.5) url(https://www.zegna.cn/content/dam/zegna-commerce/editorials/ratio15/editorial-box/fw21/triple-stitch/triple-stitch-sneakers-for-men-desktop2.webp.editorialImage.R5.png) ;
+    background-blend-mode: darken;
+    color: white;
+    text-align: center;
+}
+#img1>div>h2{
+font-size: 60px;
+margin: 0%;
+}
+#img1>div>a{
+    color: white;  
+}
+#section4{
+    width:90%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+    margin: auto;
+}
+#section4>button{
+    font-size: 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    background: transparent;
+}
+#section2>div>a{
+    color: black;  
+}
+#section5{
+    text-align: center;
+    font-weight: lighter;
+    font-size: 35px;
+    margin: auto;
+}
+#section6{
+    width:90%;
+    height:400px; 
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap:20px;
+    margin: auto;
+    margin-bottom: 300px;
+    
+}
+#section6>div{
+    width:100%;
+}
+#section6>div>img{
+    width:100%; 
+}
+#section7{
+    width:90%;
+    height:auto; 
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap:20px;
+    padding-bottom: 80px;
+    margin: auto;
+    
+}
+#section7>div{
+border: 1px solid gray;
+padding: 10px;
+}
+#section7>div>div{
+    width:10%;
+     
+}
+#section7>div>div>img{
+    width:100%; 
+}
