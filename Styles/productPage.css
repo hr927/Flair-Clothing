@@ -1,0 +1,233 @@
+
+body {
+    font-family: try arial, Helvetica, sans-serif;
+}
+#top {
+    /* border: 1px solid black; */
+    width: 58%;
+}
+#top>p>a {
+    color: black;
+}
+#btn {
+    margin-top: 50px;
+    /* border: 1px solid black; */
+    width: 20%;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 17px;
+}
+#btn>a {
+    font-size: larger;
+    text-decoration:none;
+    color: rgb(70, 69, 69);
+}
+#sort {
+    display: flex;
+    justify-content: space-between;
+    width: 97.5%;
+    margin: auto;
+    margin-top: 30px;
+}
+#sub {
+    /* border: 1px solid black; */
+    display: none;
+    gap: 30px;
+    position: absolute;
+    width: 12%;
+    padding: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    left: 85%;
+    justify-content: flex-end;
+    background-color: white;
+    border-radius: 10px;
+}
+ul {
+    list-style-type: none;
+}
+li>a {
+    text-decoration: none;
+}
+#sub>a {
+    text-decoration: none;
+    font-size: larger;
+    color: black;
+}
+#sort_btn {
+    color: rgb(61, 61, 61);
+    font-weight: bold;
+}
+#sub>a:hover {
+    background-color: rgb(206, 206, 206);
+}
+#main {
+    display: flex;
+    /* height: 500px; */
+    /* border: 1px solid red; */
+}
+#category {
+    flex: 2;
+    /* border: 1px solid black; */
+}
+#items {
+    flex: 8;
+    /* border: 1px solid black; */
+}
+/*drop*/
+.accordion {
+    display: flex;
+    justify-content: space-between;
+    background-color: #eee;
+    color: rgb(39, 39, 39);
+    background-color: rgb(255, 255, 255);
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+    font-size:medium;
+    font-weight:550;
+  }
+  
+  /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+  .active, .accordion:hover {
+    background-color: rgb(233, 227, 227);
+  }
+  
+  /* Style the accordion panel. Note: hidden by default */
+  .panel {
+    padding: 10px 18px;
+    background-color: white;
+    display: none;
+    overflow: hidden;
+    gap: 30px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+.panel>a {
+    text-decoration: none;
+    color: rgb(61, 61, 61);
+}
+#brand_inp {
+    border: 0;
+}
+#scroll {
+    height: auto;
+    max-height: 200px;
+    overflow-x: hidden;
+}
+.panel>#col {
+    display: flex;
+    align-items: center;
+    border: 0.5px solid rgb(202, 202, 202);
+    border-radius: 10px;
+    width: 100%;
+}
+.panel>div>h4 {
+    margin-left: 20px;
+}
+.panel>#col:nth-child(2) {
+    color: rgb(52, 52, 228);
+}
+.panel>#col:nth-child(3){
+    color: brown;
+}
+.panel>#col:nth-child(4){
+    color: gold;
+}
+.panel>#col:nth-child(5){
+    color: green;
+}
+.panel>#col:nth-child(6){
+    color: grey;
+}
+.panel>#col:nth-child(7){
+    color: orange;
+}
+.panel>#col:nth-child(8){
+    color: red;
+}
+.panel>#col:nth-child(9){
+    color: pink;
+}
+.panel>#col:nth-child(10){
+    color: purple;
+}
+.slidecontainer {
+    width: 100%;
+  }
+  
+  .slider {
+    /* -webkit-appearance:none; */
+    width: 100%;
+    height: 35px;
+    background: #5c5b5b;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+  }
+  
+  .slider:hover {
+    opacity: 1;
+  }
+  
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    background: #171718;
+    cursor: pointer;
+  }
+  
+  .slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    background: #048f5c;
+    cursor: pointer;
+  }
+  .slidecontainer>p {
+    border: 0.5px solid grey;
+    height: 30px;
+    border-radius: 10px;
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(131, 130, 130);
+  }
+  #items {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px 10px;
+  }
+  #items>div>img {
+    width: 100%;
+  }
+  .cardTop {
+    display: flex;
+    justify-content:space-between;
+    /* border: 1px solid red; */
+    padding: 0px 10px;
+    height: 40px;
+  }
+  #items>div {
+    /* border: 1px solid black; */
+    width: 70%;
+    margin: auto;
+    /* padding: 10px; */
+  }
+  .cardTop>button{
+    border: 0;
+    background-color: white;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+  }
+  .cardTop>button:hover{
+    background-color: #bbb8b8;
+    border-radius: 10px;
+  }
+  
