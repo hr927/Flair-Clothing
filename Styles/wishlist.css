@@ -1,0 +1,149 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+}
+
+#top_section {
+  width: 100%;
+  background: white;
+  display: flex;
+  flex-direction: column;
+}
+
+#default {
+  width: 33%;
+  display: flex;
+  flex-direction: column;
+  padding: 0px 12px;
+  margin: auto;
+  align-items: center;
+}
+
+#default > h1 {
+  text-align: center;
+  font-size: 30px;
+  line-height: 30px;
+  color: #222222;
+  margin: 0px 0px 24px;
+}
+#wishMessage {
+  text-align: center;
+  font-size: 16px;
+  line-height: 22px;
+  color: #222222;
+  margin: 0px 0px 24px;
+}
+
+#signIn {
+  width: 50%;
+  font-size: 16px;
+  line-height: 22px;
+  text-align: center;
+  color: white;
+  background-color: #222222;
+  border: 1px solid #222222;
+  padding: 14px 32px 12px;
+  border-radius: 4px;
+}
+#signIn:hover {
+  cursor: pointer;
+  background-color: #595959;
+  border: 1px solid #595959;
+}
+
+#container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  width: 60%;
+  margin: auto;
+}
+
+.userWish {
+  display: none;
+}
+
+#getInspired {
+  width: 50%;
+  font-size: 16px;
+  line-height: 22px;
+  text-align: center;
+  color: white;
+  background-color: #222222;
+  border: 1px solid #222222;
+  padding: 14px 32px 12px;
+  border-radius: 4px;
+}
+
+#getInspired:hover {
+  cursor: pointer;
+  background-color: #595959;
+  border: 1px solid #595959;
+}
+.wishcountclass {
+  margin-bottom: 24px;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.removeBtn {
+  background-color: #ffffff;
+  width: 10%;
+  border: none;
+  align-self: flex-end;
+  cursor: pointer;
+}
+.removeBtn > img {
+  width: 100%;
+}
+.removeBtn:hover {
+  background-color: #f0f0f0;
+}
+.card > img {
+  display: block;
+  width: 100%;
+}
+.prodSeason {
+  font-size: 16px;
+  line-height: 22px;
+  text-align: start;
+  color: #727272;
+}
+.prodName {
+  font-size: 16px;
+  line-height: 22px;
+  text-align: start;
+  color: #222222;
+}
+.prodDesc {
+  font-size: 16px;
+  line-height: 22px;
+  text-align: start;
+  color: #222222;
+}
+.pordPrice {
+  font-size: 16px;
+  line-height: 22px;
+  text-align: start;
+  color: #222222;
+  padding-top: 4px;
+}
+.addToBag {
+  /* margin: auto; */
+  font-size: 16px;
+  line-height: 22px;
+  text-align: center;
+  color: #222222;
+  background: #ffffff;
+  padding: 10px 16px;
+  border-radius: 5px;
+}
+
+.addToBag:hover {
+  cursor: pointer;
+  background-color: #f0f0f0;
+}
