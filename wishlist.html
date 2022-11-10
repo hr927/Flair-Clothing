@@ -6,11 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Wishlist</title>
     <link rel="stylesheet" href="./Styles/wishlist.css" />
+    <link rel="stylesheet" href="./Styles/bottom.css" />
   </head>
   <body>
     <div id="navbar"></div>
     <div id="top_section">
-      <div id="default" class="defaultWish">
+      <div id="default">
         <h1>WISHLIST</h1>
         <p id="wishCount"></p>
         <p id="wishMessage">
@@ -18,15 +19,18 @@
         </p>
         <button id="signIn">Sign In</button>
       </div>
-      <div id="loggedIn" class="userWish">
+      <div id="loggedIn">
         <h1>WISHLIST</h1>
         <p id="userWish"></p>
-        <p id="userWishMsg">
-          Save your favorite items to start building your wishlist
-        </p>
-        <button id="getInspired">Get Inspired</button>
+        <div id="usermsg">
+          <p id="userWishMsg">
+            Save your favorite items to start building your wishlist
+          </p>
+          <button id="getInspired">Get Inspired</button>
+        </div>
       </div>
       <div id="container"></div>
+      <div id="bottomSec"></div>
       <div id="footer"></div>
     </div>
   </body>
