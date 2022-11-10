@@ -20,13 +20,33 @@
   margin: auto;
   align-items: center;
 }
-
+#loggedIn {
+  width: 33%;
+  display: flex;
+  flex-direction: column;
+  padding: 0px 12px;
+  margin: auto;
+  align-items: center;
+}
 #default > h1 {
   text-align: center;
   font-size: 30px;
   line-height: 30px;
   color: #222222;
   margin: 0px 0px 24px;
+}
+#loggedIn > h1 {
+  text-align: center;
+  font-size: 30px;
+  line-height: 30px;
+  color: #222222;
+  margin: 0px 0px 24px;
+}
+#usermsg {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  text-align: center;
 }
 #wishMessage {
   text-align: center;
@@ -55,7 +75,7 @@
 
 #container {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  /* grid-template-columns: repeat(4, 1fr); */
   gap: 20px;
   width: 60%;
   margin: auto;
@@ -75,6 +95,7 @@
   border: 1px solid #222222;
   padding: 14px 32px 12px;
   border-radius: 4px;
+  margin: auto;
 }
 
 #getInspired:hover {
@@ -89,6 +110,8 @@
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  max-width: 20%;
+  margin: auto;
 }
 .removeBtn {
   background-color: #ffffff;

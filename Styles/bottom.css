@@ -1,0 +1,113 @@
+#bottomSec {
+  width: 100%;
+  margin: 72px 0px;
+  align-items: center;
+}
+
+#botform {
+  width: 20%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+#botform > :nth-child(1) {
+  font-size: 30px;
+  line-height: 30px;
+  color: #222222;
+  text-align: center;
+  display: block;
+}
+#botform > :nth-child(2) {
+  font-size: 16px;
+  line-height: 22px;
+  color: #222222;
+  text-align: center;
+  display: block;
+}
+
+#gender {
+  display: flex;
+  flex-direction: row;
+  font-size: 16px;
+  line-height: 22px;
+  color: #222222;
+  justify-content: space-evenly;
+  align-items: center;
+}
+#form label {
+  padding-left: 5px;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  box-sizing: border-box;
+  gap: 10px;
+}
+form > p {
+  font-size: 16px;
+  line-height: 22px;
+  color: #222222;
+  text-align: start;
+  display: block;
+}
+#botEmail {
+  width: 100%;
+  font-size: 16px;
+  line-height: 22px;
+  text-align: start;
+  color: #222222;
+  background-color: white;
+  border: 1px solid #222222;
+  padding: 5px;
+  border-radius: 4px;
+}
+form select {
+  width: 18%;
+  font-size: 16px;
+  line-height: 22px;
+  text-align: start;
+  color: #222222;
+  background-color: white;
+  border: 1px solid #222222;
+  padding: 5px;
+  border-radius: 4px;
+}
+#botPhone {
+  width: 80%;
+  font-size: 16px;
+  line-height: 22px;
+  text-align: start;
+  color: #222222;
+  background-color: white;
+  border: 1px solid #222222;
+  padding: 5px;
+  border-radius: 4px;
+}
+#botSignUp {
+  width: 100%;
+  font-size: 16px;
+  line-height: 22px;
+  text-align: center;
+  color: white;
+  background-color: #222222;
+  border: 1px solid #222222;
+  padding: 14px 32px 12px;
+  border-radius: 4px;
+}
+#botform > :nth-child(4) {
+  font-size: 16px;
+  line-height: 22px;
+  color: #222222;
+  text-align: center;
+  display: block;
+}
+#botform > :nth-child(4) > a {
+  color: #222222;
+}
+.hide {
+  display: none;
+}
+.show {
+  display: block;
+}
