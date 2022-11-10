@@ -12,7 +12,7 @@ body {
 #btn {
     margin-top: 50px;
     /* border: 1px solid black; */
-    width: 20%;
+    width: 22%;
     display: flex;
     justify-content: space-between;
     margin-left: 17px;
@@ -222,6 +222,7 @@ li>a {
   .cardTop>button{
     border: 0;
     background-color: white;
+    
     /* display: flex;
     justify-content: center;
     align-items: center; */
@@ -230,4 +231,19 @@ li>a {
     background-color: #bbb8b8;
     border-radius: 10px;
   }
-  
+  #women_btn {
+    background-color: #e2e2e2;
+    padding: 10px;
+    border-radius: 10px;
+  }
+  #men_btn {
+    background-color: #e2e2e2;
+    padding: 10px;
+    border-radius: 10px;
+  }
+  #women_btn:hover {
+    background-color: white;
+  }
+  #men_btn:hover {
+    background-color: white;
+  }
