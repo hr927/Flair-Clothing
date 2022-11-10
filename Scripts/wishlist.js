@@ -1,7 +1,7 @@
 const getData = async () => {
   try {
     let res = await fetch(
-      `https://infinite-fortress-00447.herokuapp.com/product/`
+      `https://infinite-fortress-00447.herokuapp.com/wishlist/`
     );
     let data = await res.json();
     console.log("data:", data);
@@ -29,6 +29,7 @@ const appendData = (arr) => {
     wishcount.innerText = arr.length + " PIECES";
   }
   let container = document.querySelector("#container");
+  container.innerHTML = null;
   arr.forEach((el) => {
     let card = document.createElement("div");
     card.setAttribute("class", "card");
@@ -74,4 +75,42 @@ const appendData = (arr) => {
     );
     container.append(card);
   });
+};
+
+const removeProduct = async (el) => {
+  try {
+    let id = el.id;
+    let res = await fetch(
+      `https://infinite-fortress-00447.herokuapp.com/wishlist/${id}`,
+      {
+        method: "DELETE",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    );
+    let data = await res.json();
+    appendData(data);
+  } catch (err) {
+    console.log(err);
+  }
+};
+
+const addtoCart = async (el) => {
+  try {
+    let res = await fetch(
+      `https://infinite-fortress-00447.herokuapp.com/cart/`,
+      {
+        method: "POST",
+        body: JSON.stringify(el),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    );
+    let data = await res.json();
+    console.log("data:", data);
+  } catch (err) {
+    console.log(err);
+  }
 };
