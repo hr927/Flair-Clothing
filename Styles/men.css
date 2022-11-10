@@ -1,6 +1,6 @@
 
 *{
-    /* font-family: Arial, Helvetica, sans-serif; */
+    font-family: Arial, Helvetica, sans-serif;
     
 }
 #section1{
@@ -24,7 +24,7 @@
 #section1>div>h1{
     font-size: 60px;
 }
-#section1>div>button{
+#section1>div>a>button{
     font-size: 18px;
     font-weight: bold;
     border-radius: 8px;
@@ -57,7 +57,7 @@
     font-size: 30px;
     font-weight: lighter;
 }
-#section2>div>div>button{
+#section2>div>div>a>button{
     font-size: 18px;
     border-radius: 8px;
     font-weight: bold;
@@ -157,3 +157,61 @@ padding: 10px;
 #section7>div>div>img{
     width:100%; 
 }
+#products {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 20px 10px;
+  }
+  #products>div>img {
+    width: 100%;
+  }
+  .cardTop {
+    display: flex;
+    justify-content:space-between;
+    padding: 0px 10px;
+    height: 40px;
+  }
+  #products>div {
+    
+    width: 70%;
+    margin: auto;
+   
+  }
+  .cardTop>button{
+    border: 0;
+    background-color: white;
+    
+  }
+  .cardTop>button:hover{
+    background-color: #bbb8b8;
+    border-radius: 10px;
+  }
+  #items {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 20px 10px;
+  }
+  #items>div>img {
+    width: 100%;
+  }
+  .cardTop {
+    display: flex;
+    justify-content:space-between;
+     padding: 0px 10px;
+    height: 40px;
+  }
+  #items>div {
+    
+    width: 70%;
+    margin: auto;
+   
+  }
+  .cardTop>button{
+    border: 0;
+    background-color: white;
+    
+  }
+  .cardTop>button:hover{
+    background-color: #bbb8b8;
+    border-radius: 10px;
+  }
