@@ -100,22 +100,23 @@ p {
 #fromWish a {
   color: #222222;
 }
+#wishContainer {
+  display: grid;
+  /* grid-template-columns: repeat(4, 1fr); */
+  gap: 20px;
+  width: 60%;
+  margin: auto;
+}
 .card {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  max-width: 20%;
+  /* max-width: 20%; */
   margin: auto;
 }
 .card > img {
   display: block;
   width: 100%;
-}
-.prodSeason {
-  font-size: 16px;
-  line-height: 22px;
-  text-align: start;
-  color: #727272;
 }
 .prodName {
   font-size: 16px;
@@ -129,17 +130,221 @@ p {
   text-align: start;
   color: #222222;
 }
-.pordPrice {
+.prodPrice {
   font-size: 16px;
   line-height: 22px;
   text-align: start;
   color: #222222;
   padding-top: 4px;
 }
+
 #cartContainer {
-  border: 1px solid red;
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin: auto;
+  /* border: 1px solid red; */
 }
 
+#heading {
+  display: flex;
+  /* justify-content: space-between; */
+  align-items: center;
+  padding: 10px;
+}
+
+#heading > h1 {
+  width: 20%;
+  margin: auto;
+  text-align: center;
+  font-size: 30px;
+  line-height: 30px;
+  color: #222222;
+}
+
+#heading > a {
+  font-size: 14px;
+  line-height: 18px;
+  text-align: center;
+  color: #222222;
+}
+
+#importFrom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  padding: 10px;
+  font-size: 14px;
+  line-height: 18px;
+  text-align: center;
+  color: #222222;
+  border-bottom: 1px solid #222222;
+}
+#importFrom p > span {
+  font-weight: 600;
+}
+#productContainer {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  width: 80%;
+  margin: auto;
+  padding: 5px;
+}
+#pcart {
+  display: flex;
+}
+#pCartdiv {
+  display: flex;
+}
+#pCartImg {
+  width: 8%;
+  margin: auto;
+}
+#pCartImg > img {
+  width: 100%;
+}
+#pDesc {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* align-items: flex-start; */
+  width: 20%;
+  margin: auto;
+}
+#pDesc > :nth-child(2) {
+  font-size: 16px;
+  line-height: 22px;
+  text-align: left;
+  color: #222222;
+  font-weight: 600;
+}
+#pDesc > :nth-child(1) {
+  font-size: 14px;
+  line-height: 18px;
+  text-align: left;
+  color: #727272;
+}
+#pDesc > :nth-child(3) {
+  font-size: 14px;
+  line-height: 18px;
+  text-align: left;
+  color: #222222;
+}
+#pPriceDiv {
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  margin: auto;
+}
+
+#pPriceDiv > :nth-child(1) {
+  font-size: 16px;
+  line-height: 22px;
+  text-align: left;
+  color: #222222;
+  font-weight: 600;
+}
+
+#pPriceDiv > :nth-child(2) {
+  font-size: 14px;
+  line-height: 18px;
+  text-align: left;
+  color: #222222;
+}
+#pQuantDiv {
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  margin: auto;
+}
+
+#pQuantDiv > :nth-child(1) {
+  font-size: 16px;
+  line-height: 22px;
+  text-align: left;
+  color: #222222;
+  font-weight: 600;
+}
+#pQuantDiv > :nth-child(2) {
+  width: 30%;
+  font-size: 16px;
+  line-height: 22px;
+  text-align: left;
+  color: #222222;
+  font-weight: 600;
+}
+.removeBtn {
+  width: 2%;
+  height: 1%;
+  margin: auto;
+  border: none;
+  background-color: #ffffff;
+}
+.removeBtn > img {
+  width: 100%;
+}
+#summary {
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  margin: auto;
+  padding: 10px;
+}
+#summary > :nth-child(1) {
+  font-size: 19px;
+  line-height: 26px;
+  font-weight: 600;
+  color: #222222;
+  text-align: left;
+  margin-bottom: 10px;
+}
+#subTotal {
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+  line-height: 22px;
+  color: #222222;
+  margin-bottom: 10px;
+}
+
+#delivery {
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+  line-height: 22px;
+  color: #222222;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #222222;
+}
+
+#total {
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+  line-height: 22px;
+  color: #222222;
+  margin-bottom: 10px;
+}
+
+#checkOut {
+  width: 100%;
+  font-size: 16px;
+  line-height: 22px;
+  text-align: center;
+  color: white;
+  background-color: #222222;
+  border: 1px solid #222222;
+  padding: 14px 32px 12px;
+  border-radius: 4px;
+}
+
+#checkOut:hover {
+  cursor: pointer;
+}
 #helpSection {
   background-color: #f5f5f5;
   display: flex;

@@ -1,6 +1,12 @@
 let defaultDiv = document.querySelector("#default");
 let wishDiv = document.querySelector("#fromWish");
 let cartDiv = document.querySelector("#cartContainer");
+let checkOutBtn = document.querySelector("#checkOut");
+
+let cartPrice = JSON.parse(localStorage.getItem("cartPrice")) || {};
+checkOutBtn.onclick = () => {
+  window.location.href = "address.html";
+};
 
 // Get cart data function for getting the cart items from server
 const getCart = async () => {
@@ -10,15 +16,108 @@ const getCart = async () => {
     // console.log("data:", data);
     if (data.length === 0) {
       cartDiv.style.display = "none";
-    } else {
+    } else if (data.length > 0) {
       defaultDiv.style.display = "none";
-      //   appendCart(data);
+      appendCart(data);
     }
   } catch (err) {
     console.log(err);
   }
 };
 getCart();
+
+// Append Cart function to append cart data from server
+let subtotal = 0;
+const appendCart = (arr) => {
+  let pContainer = document.querySelector("#productContainer");
+  pContainer.innerHTML = null;
+
+  arr.forEach((el) => {
+    let prodDiv = document.createElement("div");
+    prodDiv.setAttribute("id", "pCartdiv");
+    let prodImgDiv = document.createElement("div");
+    prodImgDiv.setAttribute("id", "pCartImg");
+    let prodImg = document.createElement("img");
+    prodImg.src = el.image_url[0];
+    prodImgDiv.append(prodImg);
+    let prodDescDiv = document.createElement("div");
+    prodDescDiv.setAttribute("id", "pDesc");
+    let prodSeason = document.createElement("p");
+    prodSeason.innerText = el.seasons;
+    let prodName = document.createElement("p");
+    prodName.innerText = el.name;
+    let prodId = document.createElement("p");
+    prodId.innerText = el.productId;
+    prodDescDiv.append(prodSeason, prodName, prodId);
+    let prodPriceDiv = document.createElement("div");
+    prodPriceDiv.setAttribute("id", "pPriceDiv");
+    let prodPrice = document.createElement("p");
+    prodPrice.innerText = "$" + +el.price;
+    console.log("price:", el.price);
+
+    let importDuty = document.createElement("p");
+    importDuty.innerText = "(Import duties included)";
+    prodPriceDiv.append(prodPrice, importDuty);
+    let quantdiv = document.createElement("div");
+    quantdiv.setAttribute("id", "pQuantDiv");
+    let prodquant = document.createElement("input");
+    prodquant.setAttribute("id", "prodQuant");
+    prodquant.setAttribute("type", "number");
+    prodquant.setAttribute("max", "2");
+    prodquant.setAttribute("min", "1");
+    prodquant.setAttribute("id", "prodQuant");
+    prodquant.setAttribute("value", "1");
+    console.log("prodquant:", prodquant.value);
+
+    let pqaunt = document.createElement("p");
+    pqaunt.innerText = "Quantity";
+    quantdiv.append(pqaunt, prodquant);
+    subtotal += +el.price * +prodquant.value;
+    console.log("subtotal:", subtotal);
+    let removeBtn = document.createElement("button");
+    removeBtn.innerHTML =
+      '<img src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-close-512.png" alt="">';
+    removeBtn.setAttribute("class", "removeBtn");
+    removeBtn.addEventListener("click", () => {
+      removeProduct(el);
+    });
+    prodDiv.append(prodImgDiv, prodDescDiv, prodPriceDiv, quantdiv, removeBtn);
+    pContainer.append(prodDiv);
+  });
+  let stPrice = document.querySelector("#stprice");
+  stPrice.innerText = subtotal;
+  let delCharge = document.querySelector("#delCharge");
+  delCharge.innerText = "$24";
+  let totalPrice = document.querySelector("#tprice");
+  totalPrice.innerText = subtotal + 24;
+
+  cartPrice = {
+    subPrice: subtotal,
+    delivery: "24",
+    total: subtotal + 24,
+  };
+  localStorage.setItem("cartPrice", JSON.stringify(cartPrice));
+};
+
+// function to remove product from cart
+const removeProduct = async (el) => {
+  try {
+    let id = el.id;
+    let res = await fetch(
+      `https://infinite-fortress-00447.herokuapp.com/cart/${id}`,
+      {
+        method: "DELETE",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    );
+    window.location.reload();
+    getCart();
+  } catch (err) {
+    console.log(err);
+  }
+};
 // Get data function for getting the wishlist items from server
 const getData = async () => {
   try {
