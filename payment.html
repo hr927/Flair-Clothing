@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <title>Document</title>
+    <link rel="stylesheet" href="./Styles/payment.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div id="payment_nav">
+        <div id="payment_left">
+            <i class="fa fa-lock" aria-hidden="true"></i> Secure checkout
+        </div>
+        <div id="payment_mid">
+            <h2>FLAIRCLOTHINGS</h2>
+        </div>
+        <div id="payment_right">
+            <a href="#">Need Help?</a>
+            <i class="fa fa-phone" aria-hidden="true"></i>
+            <p>(+44 (0) 20 3510 0670)</p>
+        </div>
+    </div>
+    <div id="payment_main">
+        <div id="payment_main_left">
+            <p>Select your payment method</p>
+            <div id="payment_btn">
+                <button id="payment_upi"><i class="fa fa-paypal" style="font-size:48px;color:black"></i><h3>UPI</h3></button>
+                <button id="payment_card"><i class="fa fa-credit-card" style="font-size:48px;color:black"></i><h3>Debit or Credit card</h3></button>
+                <button id="payment_cod"><i class="fa fa-truck" style="font-size:48px;color:black"></i><h3>Cash on Delivery</h3></button>
+            </div>
+            <div id="upi_inp">
+                <input type="text" id="upi_inp_val" placeholder="Enter upi ID">
+                <button id="upi_inp_btn">Submit</button>
+            </div>
+            <div id="card_inp">
+                <p>CARD DETAILS</p>
+                <label for="">Cardholder name</label>
+                <input type="text" id="name" placeholder="Cardholder name">
+                <label for="">Card number</label>
+                <input type="tel" id="number" minlength="14" maxlength='16' placeholder="card number">
+                <label for="">Expiration date</label>
+                <input type="text" maxlength='5' placeholder="MM/YY">
+            </div>
+            <div id="cod_inp">
+                <p>When you place your order, you’ll be redirected to TripleA to complete your purchase.
+                    <br>
+                    Your payment to TripleA will pay for your FLAIRCLOTHINGS purchase in full.
+                    <br>
+                    Keep the page open until your payment is successful.
+                    <br>
+                    Find out more about TripleA
+                    <br>
+                    “Save and Continue” to proceed with COD</p>
+            </div>
+            <p>BILLING ADDRESS</p>
+            <div id="billing_add"></div>
+        </div>
+        <div id="payment_main_right">
+            <h1>Summary</h1>
+            <button id="save_btn">Save and Continue <i class="fa fa-chevron-right"></i></button>
+        </div>
+    </div>
+    <script src="./Scripts/payment.js"></script>
+</body>
+</html>
