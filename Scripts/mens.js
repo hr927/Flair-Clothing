@@ -58,6 +58,12 @@ const append = (data)=>{
         
         let image = document.createElement("img");
         image.src = el.image_url[0];
+        image.onmouseover = ()=>{
+            image.src = el.image_url[1];
+        }
+        image.onmouseout = ()=>{
+            image.src = el.image_url[0];
+        }
         let seasons = document.createElement("p");
         seasons.innerText = el.seasons;
         let name = document.createElement("h3");
@@ -149,6 +155,12 @@ const appended = (datas)=>{
         
         let image = document.createElement("img");
         image.src = el.image_url[0];
+        image.onmouseover = ()=>{
+            image.src = el.image_url[1];
+        }
+        image.onmouseout = ()=>{
+            image.src = el.image_url[0];
+        }
         let seasons = document.createElement("p");
         seasons.innerText = el.seasons;
         let name = document.createElement("h3");
