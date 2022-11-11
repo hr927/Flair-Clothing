@@ -7,6 +7,7 @@
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <title>Document</title>
     <link rel="stylesheet" href="./Styles/productPage.css">
+    <link rel="stylesheet" href="./Styles/bottom.css">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
 </head>
 <body>
@@ -27,8 +28,8 @@
                 <div id="sub">
                     <a href="#"><option value="op" id="op">Our Pick</option></a>
                     <a href="#"><option value="nf">New First</option></a>
-                    <a href="#"><option value="hl">Price high to low</option></a>
-                    <a href="#"><option value="lh">Price low to high</option></a>
+                    <a href="#"><option value="hl" id="hl">Price high to low</option></a>
+                    <a href="#"><option value="lh" id="lh">Price low to high</option></a>
                 </div>
             </li>
         </ul>
@@ -97,6 +98,7 @@
         </div>
         <div id="items"></div>
     </div>
-    <script src="./Scripts/productPage.js"></script>
+    <div id="bottomsec"></div>
+    <script type="module" src="./Scripts/productPage.js"></script>
 </body>
 </html>

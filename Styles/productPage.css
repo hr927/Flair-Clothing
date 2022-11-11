@@ -247,3 +247,7 @@ li>a {
   #men_btn:hover {
     background-color: white;
   }
+
+  #bottomsec {
+    margin-top: 50px;
+  }
