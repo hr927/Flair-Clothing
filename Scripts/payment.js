@@ -94,3 +94,22 @@ payment_cod.onclick = ()=>{
     flag = false;
 }
 
+let address = JSON.parse(localStorage.getItem("userAddress"));
+
+console.log(address);
+
+const appendData = (data)=>{
+    let billing_add = document.getElementById("billing_add");
+    billing_add.innerHTML = null;
+    data.forEach((data)=>{
+        let name = document.createElement("p");
+    name.innerText = data.fname+" "+data.lname;
+    let address = document.createElement("p");
+    address.innerText = data.address+","+data.city+"-"+data.zip+","+data.state+","+data.country;
+    let change = document.createElement("a");
+    change.innerText = "change";
+    change.href = "address.html";
+    billing_add.append(name,address,change); 
+    });
+}
+appendData(address)
