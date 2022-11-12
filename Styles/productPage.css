@@ -5,6 +5,8 @@ body {
 #top {
     /* border: 1px solid black; */
     width: 58%;
+    padding-top: 180px;
+    padding-left: 15px;
 }
 #top>p>a {
     color: black;
