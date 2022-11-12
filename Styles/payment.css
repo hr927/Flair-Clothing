@@ -125,3 +125,10 @@
 #save_btn:hover {
     background-color: rgb(99, 98, 98);
 }
+
+#billing_add {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 20px;
+}
