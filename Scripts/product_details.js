@@ -1,6 +1,4 @@
-let recommend_data = [{
-        
-    }]
+
 
 const getData = async () => {
     try {
@@ -51,7 +49,7 @@ const getData = async () => {
     let imp = document.createElement("p");
     imp.innerText = "import duties included";
     
-
+//add to bag function
     let addtobag = document.createElement("button");
     addtobag.innerText = "Add To Bag";
     addtobag.setAttribute("class", "addtobag");
@@ -63,9 +61,10 @@ const getData = async () => {
     whishbtn.innerHTML ="Whislist"
    whishbtn.setAttribute("class","whishbtn")
    whishbtn.style.width="20%"
-    whishbtn.addEventListener("click",()=>{
-      window.location.href="whislist.html"
-      whishbtn_data()
+      whishbtn.addEventListener("click", () => {
+        
+      window.location.href="wishlist.html"
+      whishbtn_data(data)
     })
 
     let delivery = document.createElement("p");
@@ -153,13 +152,18 @@ const getData = async () => {
 
 
 
+
+
+
+
+
   
 
-  const whishbtn_data =async()=>{
+  const whishbtn_data =async(el)=>{
     try{
-      let res = await fetch(`https://infinite-fortress-00447.herokuapp.com/wishlist`,{
+      let res = await fetch(`https://infinite-fortress-00447.herokuapp.com/wishlist1`,{
         method:"POST",
-        body:JSON.stringify(),
+        body:JSON.stringify(el),
         headers:{
           'Content-Type': 'application/json'
         }
