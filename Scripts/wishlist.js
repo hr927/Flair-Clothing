@@ -11,7 +11,24 @@ const getData = async () => {
     console.log(err);
   }
 };
+import navbar from "../Components/navbar.js";
+let navbar_div = document.getElementById("navbar");
+navbar_div.innerHTML = navbar();
 
+import footer from "../Components/footer.js";
+let footer_div = document.getElementById("footer");
+footer_div.innerHTML = footer();
+
+// checking if logged in
+
+let loggedIn = JSON.parse(localStorage.getItem("loggedin"));
+if (loggedIn) {
+  document.querySelector("#default").style.display = "none";
+  document.querySelector("#loggedIn").style.display = "flex";
+} else {
+  document.querySelector("#default").style.display = "flex";
+  document.querySelector("#loggedIn").style.display = "none";
+}
 // User data base on LS
 let fcUser = JSON.parse(localStorage.getItem("fcUser")) || [];
 
