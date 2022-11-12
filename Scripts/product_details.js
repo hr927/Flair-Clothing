@@ -1,4 +1,3 @@
-
 let recommend_data = [
     {
         image_url: ["https://cdn-images.farfetch-contents.com/19/21/96/27/19219627_42198739_1000.jpg", "https://cdn-images.farfetch-contents.com/19/21/96/27/19219627_42199331_1000.jpg", "https://cdn-images.farfetch-contents.com/19/21/96/27/19219627_42200236_1000.jpg", "https://cdn-images.farfetch-contents.com/19/21/96/27/19219627_42198740_1000.jpg"],
@@ -68,6 +67,8 @@ const re_data = (data) => {
 }
 re_data(recommend_data)
 
+
+
 const getData = async () => {
     try {
       let res = await fetch(
@@ -75,7 +76,8 @@ const getData = async () => {
       );
       let data = await res.json();
       console.log(data);
-      append_data(data)
+        append_data(data)
+        console.log("get",data)
     } catch (error) {
       console.log(error);
     }
@@ -91,48 +93,58 @@ const getData = async () => {
     let div1 = document.createElement("div");
     div1.setAttribute("class", "div1");
     let img1 = document.createElement("img");
-    img1.src = data.image_url[0];
+      img1.src = data.image_url[0];
+      
 
     let div2 = document.createElement("div");
     div2.setAttribute("class","div2")
-    let img2 = document.createElement("img");
-    img2.src = data.image_url[1];
+      let img2 = document.createElement("img");
+      img2.src = data.image_url[1];
+      
+
+
     let img5 = document.createElement("img");
-    img5.src = data.image_url[1];
+      img5.src = data.image_url[1];
+      
     
 
     let img3 = document.createElement("img");
-    img3.src = data.image_url[2];
+      img3.src = data.image_url[2];
+     
+
     let img4 = document.createElement("img");
-    img4.src = data.image_url[3];
+      img4.src = data.image_url[3];
+      
 
     let div3 = document.createElement("div");
     div3.setAttribute("class","div3")
-    var name = document.createElement("h3");
-    name.innerText = data.name;
-    var description = document.createElement("p");
+    let name = document.createElement("h3");
+      name.innerText = data.name;
+      name.setAttribute("class","name")
+      
+    let description = document.createElement("p");
     description.innerText = data.description;
     let price = document.createElement("p");
     price.innerText = "$" + +data.price;
     let imp = document.createElement("p");
     imp.innerText = "import duties included";
     
-//add to bag function
+
     let addtobag = document.createElement("button");
     addtobag.innerText = "Add To Bag";
     addtobag.setAttribute("class", "addtobag");
     addtobag.addEventListener("click",()=>{
-      window.location.href="cart.html"
+        window.location.href = "cart.html"
+        add_cart(data)
     })
 
-    let whishbtn = document.createElement("button");
-    whishbtn.innerHTML ="Whislist"
-   whishbtn.setAttribute("class","whishbtn")
-   whishbtn.style.width="20%"
-      whishbtn.addEventListener("click", () => {
-        
+    let wishbtn = document.createElement("button");
+    wishbtn.innerHTML ="Wishlist"
+   wishbtn.setAttribute("class","wishbtn")
+   
+    wishbtn.addEventListener("click",()=>{
       window.location.href="wishlist.html"
-      whishbtn_data(data)
+      wishbtn_data(data)
     })
 
     let delivery = document.createElement("p");
@@ -147,9 +159,9 @@ const getData = async () => {
     let div6 = document.createElement("div");
     div6.setAttribute("class", "div6");
     let path1 = document.createElement("p");
-    path1.innerText = " Home > ";
+    path1.innerHTML ="Home" + ">" ;
     let path2 = document.createElement("p");
-    path2.innerText = data.name + ">";
+    path2.innerText = data.name + " > ";
     let path3 = document.createElement("p");
     path3.innerText = data.description;
 
@@ -198,7 +210,7 @@ const getData = async () => {
       imp,
       sizeGuide,
       addtobag,
-      whishbtn,
+      wishbtn,
       delivery,
       date_d
     );
@@ -220,16 +232,11 @@ const getData = async () => {
 
 
 
-
-
-
-
-
   
 
-  const whishbtn_data =async(el)=>{
+  const wishbtn_data =async(el)=>{
     try{
-      let res = await fetch(`https://infinite-fortress-00447.herokuapp.com/wishlist1`,{
+      let res = await fetch(`https://infinite-fortress-00447.herokuapp.com/wishlist`,{
         method:"POST",
         body:JSON.stringify(el),
         headers:{
@@ -241,4 +248,16 @@ const getData = async () => {
     }catch(error){
       console.log(error)
     }
-  }
+}
+const add_cart =async (el) => {
+    let res = await fetch(`https://infinite-fortress-00447.herokuapp.com/cart`, {
+        method: "POST",
+        body: JSON.stringify(el),
+        headers: {
+            'Content-Type': 'application/json'
+        }
+       
+    })
+    let data = await res.json()
+    console.log("bag:",data)
+}
