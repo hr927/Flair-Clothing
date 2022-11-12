@@ -19,13 +19,16 @@ footer_div.innerHTML = footer();
 let loggedIn = JSON.parse(localStorage.getItem("loggedin"));
 let continueBtn = document.querySelector("#checkOut");
 
-if (loggedIn) {
-  continueBtn.onclick = () => {
+continueBtn.onclick = () => {
+  myFunc();
+};
+const myFunc = () => {
+  if (loggedIn) {
     window.location.href = "address.html";
-  };
-} else {
-  alert("Please login first!");
-}
+  } else {
+    alert("Please login first");
+  }
+};
 // Get cart data function for getting the cart items from server
 const getCart = async () => {
   try {
