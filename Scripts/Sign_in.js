@@ -45,7 +45,7 @@ function func(){
      document.getElementById("wrong_credential").innerText=null;
          alert("Signin Successfull :)")
         //  have to add home page path
-     window.location.href=""
+     window.location.href="index.html"
     }
  
      document.getElementById("email").value=null;
