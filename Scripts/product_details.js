@@ -1,3 +1,74 @@
+let recommend_data = [
+    {
+        image_url: ["https://cdn-images.farfetch-contents.com/19/21/96/27/19219627_42198739_1000.jpg", "https://cdn-images.farfetch-contents.com/19/21/96/27/19219627_42199331_1000.jpg", "https://cdn-images.farfetch-contents.com/19/21/96/27/19219627_42200236_1000.jpg", "https://cdn-images.farfetch-contents.com/19/21/96/27/19219627_42198740_1000.jpg"],
+        seasons: "New Season",
+        name: "Rhude",
+        description: "logo-print detail T-shirt",
+        price: `370`,
+        highlights: ["white/blue", "cotton", "logo print to the front", "round neck"],
+        composition: "Cotton 100%",
+        productId: "FARFETCH ID: 19219627",
+        quantity: "1"
+    },
+    {
+        image_url: ["https://cdn-images.farfetch-contents.com/18/90/37/16/18903716_41087054_1000.jpg", "https://cdn-images.farfetch-contents.com/18/90/37/16/18903716_41087056_1000.jpg", "https://cdn-images.farfetch-contents.com/18/90/37/16/18903716_41087058_1000.jpg", "https://cdn-images.farfetch-contents.com/18/90/37/16/18903716_41088078_1000.jpg"],
+        seasons: "New Season",
+        name: "Dion Lee",
+        description: "lace up bell-sleeve blouse",
+        price: `1240`,
+        highlights: ["black", "semi-sheer construction", "V-neck", "front lace-up fastening"],
+        composition: "Silk 100%",
+        productId: "FARFETCH ID: 18903716",
+        quantity: "1"
+    },
+    {
+        image_url: ["https://cdn-images.farfetch-contents.com/18/04/17/94/18041794_38648000_1000.jpg", "https://cdn-images.farfetch-contents.com/18/04/17/94/18041794_38648009_1000.jpg", "https://cdn-images.farfetch-contents.com/18/04/17/94/18041794_38647603_1000.jpg", "https://cdn-images.farfetch-contents.com/18/04/17/94/18041794_38648002_1000.jpg"],
+        seasons: "New Season",
+        name: "Nanushka",
+        description: "animal-print organic-cotton shirt",
+        price: `764`,
+        highlights: ["nude/dark brown", "organic cotton", "animal print", "front button fastening"],
+        composition: "Organic Cotton 100%",
+        productId: "FARFETCH ID: 18041794",
+        quantity: "1"
+    },
+    {
+        image_url: ["https://cdn-images.farfetch-contents.com/18/03/77/49/18037749_41625527_1000.jpg", "https://cdn-images.farfetch-contents.com/18/03/77/49/18037749_41468641_1000.jpg", "https://cdn-images.farfetch-contents.com/18/03/77/49/18037749_41467499_1000.jpg", "https://cdn-images.farfetch-contents.com/18/03/77/49/18037749_41467490_1000.jpg"],
+        seasons: "New Season",
+        name: "BOSS",
+        description: "buckle-detail tote bag",
+        price: `502`,
+        highlights: ["black/white", "all-over logo print", "front zip fastening pockets", "single rounded top handle"],
+        composition: "Polyester 100%",
+        productId: "FARFETCH ID: 18037749",
+        quantity: "1"
+    }
+];
+
+let recommend = document.getElementById("recommended")
+const re_data = (data) => {
+    
+    data.forEach(function (ele) {
+        let card = document.createElement("div");
+        card.setAttribute("class", "card");
+       
+        let image = document.createElement("img");
+        image.src = ele.image_url[1];
+        let name = document.createElement("p");
+        name.innerText = ele.name;
+        let description = document.createElement("p");
+        description.innerText = ele.description;
+        let price = document.createElement("p");
+        price.innerText = "$"+(+ele.price)
+        card.append(image, name, description, price,);
+        recommend.append(card);
+
+    })
+}
+re_data(recommend_data)
+
+
+
 const getData = async () => {
     try {
       let res = await fetch(
@@ -5,7 +76,8 @@ const getData = async () => {
       );
       let data = await res.json();
       console.log(data);
-      append_data(data)
+        append_data(data)
+        console.log("get",data)
     } catch (error) {
       console.log(error);
     }
@@ -21,26 +93,36 @@ const getData = async () => {
     let div1 = document.createElement("div");
     div1.setAttribute("class", "div1");
     let img1 = document.createElement("img");
-    img1.src = data.image_url[0];
+      img1.src = data.image_url[0];
+      
 
     let div2 = document.createElement("div");
     div2.setAttribute("class","div2")
-    let img2 = document.createElement("img");
-    img2.src = data.image_url[1];
+      let img2 = document.createElement("img");
+      img2.src = data.image_url[1];
+      
+
+
     let img5 = document.createElement("img");
-    img5.src = data.image_url[1];
+      img5.src = data.image_url[1];
+      
     
 
     let img3 = document.createElement("img");
-    img3.src = data.image_url[2];
+      img3.src = data.image_url[2];
+     
+
     let img4 = document.createElement("img");
-    img4.src = data.image_url[3];
+      img4.src = data.image_url[3];
+      
 
     let div3 = document.createElement("div");
     div3.setAttribute("class","div3")
-    var name = document.createElement("h3");
-    name.innerText = data.name;
-    var description = document.createElement("p");
+    let name = document.createElement("h3");
+      name.innerText = data.name;
+      name.setAttribute("class","name")
+      
+    let description = document.createElement("p");
     description.innerText = data.description;
     let price = document.createElement("p");
     price.innerText = "$" + +data.price;
@@ -52,16 +134,17 @@ const getData = async () => {
     addtobag.innerText = "Add To Bag";
     addtobag.setAttribute("class", "addtobag");
     addtobag.addEventListener("click",()=>{
-      window.location.href="cart.html"
+        window.location.href = "cart.html"
+        add_cart(data)
     })
 
-    let whishbtn = document.createElement("button");
-    whishbtn.innerHTML ="Whislist"
-   whishbtn.setAttribute("class","whishbtn")
-   whishbtn.style.width="20%"
-    whishbtn.addEventListener("click",()=>{
-      window.location.href="whislist.html"
-      whishbtn_data()
+    let wishbtn = document.createElement("button");
+    wishbtn.innerHTML ="Wishlist"
+   wishbtn.setAttribute("class","wishbtn")
+   
+    wishbtn.addEventListener("click",()=>{
+      window.location.href="wishlist.html"
+      wishbtn_data(data)
     })
 
     let delivery = document.createElement("p");
@@ -76,9 +159,9 @@ const getData = async () => {
     let div6 = document.createElement("div");
     div6.setAttribute("class", "div6");
     let path1 = document.createElement("p");
-    path1.innerText = " Home > ";
+    path1.innerHTML ="Home" + ">" ;
     let path2 = document.createElement("p");
-    path2.innerText = data.name + ">";
+    path2.innerText = data.name + " > ";
     let path3 = document.createElement("p");
     path3.innerText = data.description;
 
@@ -127,7 +210,7 @@ const getData = async () => {
       imp,
       sizeGuide,
       addtobag,
-      whishbtn,
+      wishbtn,
       delivery,
       date_d
     );
@@ -151,11 +234,11 @@ const getData = async () => {
 
   
 
-  const whishbtn_data =async()=>{
+  const wishbtn_data =async(el)=>{
     try{
       let res = await fetch(`https://infinite-fortress-00447.herokuapp.com/wishlist`,{
         method:"POST",
-        body:JSON.stringify(),
+        body:JSON.stringify(el),
         headers:{
           'Content-Type': 'application/json'
         }
@@ -165,4 +248,16 @@ const getData = async () => {
     }catch(error){
       console.log(error)
     }
-  }
+}
+const add_cart =async (el) => {
+    let res = await fetch(`https://infinite-fortress-00447.herokuapp.com/cart`, {
+        method: "POST",
+        body: JSON.stringify(el),
+        headers: {
+            'Content-Type': 'application/json'
+        }
+       
+    })
+    let data = await res.json()
+    console.log("bag:",data)
+}
