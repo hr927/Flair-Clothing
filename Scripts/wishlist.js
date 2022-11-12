@@ -11,7 +11,24 @@ const getData = async () => {
     console.log(err);
   }
 };
+import navbar from "../Components/navbar.js";
+let navbar_div = document.getElementById("navbar");
+navbar_div.innerHTML = navbar();
 
+import footer from "../Components/footer.js";
+let footer_div = document.getElementById("footer");
+footer_div.innerHTML = footer();
+
+// checking if logged in
+
+let loggedIn = JSON.parse(localStorage.getItem("loggedin"));
+if (loggedIn) {
+  document.querySelector("#default").style.display = "none";
+  document.querySelector("#loggedIn").style.display = "flex";
+} else {
+  document.querySelector("#default").style.display = "flex";
+  document.querySelector("#loggedIn").style.display = "none";
+}
 // User data base on LS
 let fcUser = JSON.parse(localStorage.getItem("fcUser")) || [];
 
@@ -110,14 +127,14 @@ const botSignUp = () => {
 };
 getData();
 let prodSizes = ["XS", "S", "M", "L", "XL"];
-let logIn = false;
-let defaultDiv = document.querySelector("#default");
-let userDiv = document.querySelector("#loggedIn");
-if (logIn === false) {
-  userDiv.style.display = "none";
-} else {
-  defaultDiv.style.display = "none";
-}
+// let logIn = false;
+// let defaultDiv = document.querySelector("#default");
+// let userDiv = document.querySelector("#loggedIn");
+// if (logIn === false) {
+//   userDiv.style.display = "none";
+// } else {
+//   defaultDiv.style.display = "none";
+// }
 // function to append data on DOM
 const appendData = (arr) => {
   let wishmessage = document.querySelector("#wishMessage");
