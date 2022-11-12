@@ -185,6 +185,7 @@ const getData = async(el)=>{
     });
     let data = await res.json();
     console.log(data);
+    window.location.href = "product_details.html";
 }
 const getData2 = async(el)=>{
     let res = await fetch(`https://infinite-fortress-00447.herokuapp.com/product/1`,{
@@ -196,6 +197,7 @@ const getData2 = async(el)=>{
     });
     let data = await res.json();
     console.log(data);
+    window.location.href = "product_details.html";
 }
 const wishData = async(el)=>{
     let res = await fetch(`https://infinite-fortress-00447.herokuapp.com/wishlist`,{
