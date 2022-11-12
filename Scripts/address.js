@@ -11,7 +11,9 @@ let paymentBtn = document.querySelector("#checkOut");
 paymentBtn.onclick = () => {
   myFunc();
 };
-
+import cartnav from "../Components/cartnav.js";
+let nav = document.querySelector("#nav");
+nav.innerHTML = cartnav();
 const myFunc = () => {
   let fname = document.querySelector("#firstName").value;
   let lname = document.querySelector("#lastName").value;
