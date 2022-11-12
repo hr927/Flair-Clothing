@@ -1,0 +1,163 @@
+
+*{
+    font-family: arial, sans-serif;
+}
+
+#fclogo{
+    width: 20%;
+    height: 30px;
+    margin: auto;
+    margin-top: 30px;
+}
+#fclogo>h1{
+    width: 100%;
+    height: 100%;
+} 
+#container{
+    border: 1px solid black;
+    width: 29%;
+    height: 550px;
+    margin: auto;
+    margin-top: 20px; 
+     border-radius: 10px;
+} 
+ 
+ #home{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+} 
+#signin{
+    width: 85%;
+    height: 550px;
+    margin: auto;
+}
+
+#user_input{
+max-height: 400px;
+overflow: auto;
+margin-top: 0%;
+}
+#redirect{
+    display: flex;
+    gap: 19px;
+    margin-bottom: -20px;
+}
+#redirect>h4:first-child{
+    border-bottom: 2px solid black;
+    margin-bottom: 19px;
+}
+#redirect>h4:first-child:hover{
+    cursor: pointer;
+}
+
+#redirect>h4:last-child{
+    color: rgb(78, 78, 78);
+}
+
+#redirect>h4:last-child:hover{
+    color: black;
+    cursor: pointer;
+}
+
+hr{
+    margin-top: -15px;
+}
+
+#user_input>input{
+    width: 95%;
+    height: 40px;
+    margin-top: -15px;
+    border-radius: 7px;
+    border: 1px solid rgb(94, 93, 93);
+}
+#user_input>input:hover{
+    border: 1px solid black;
+}
+
+#signinbtn{
+    width: 97%;
+    height: 40px;
+    border-radius: 7px;
+    border: 1px solid black;
+    font-size: 16px;
+    color: whitesmoke;
+    background-color: black;
+    font: bold;
+}
+#signinbutton:hover{
+    background-color: rgb(119, 114, 114);
+    border: 1px solid rgb(119, 114, 114);
+}
+
+.i-c-o-n-s{
+    border: 1px solid black;
+    width: 97%;
+    height: 40px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+    border-radius: 7px;
+}
+.i-c-o-n-s:hover{
+    background-color: rgb(248, 248, 248);
+}
+.i-c-o-n-s>img{
+    height: 30px;
+    width: 30px;
+    margin-left: 20px;
+}
+.i-c-o-n-s>h4{
+   margin-right: 40px;
+}
+#or{
+    text-align: center;
+}
+
+#forget{
+    text-decoration: underline;
+}
+#New_user{
+  text-align: center;
+  text-decoration: underline;
+}
+#keep_me_signin{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    margin-top: 10px;
+     font-size: 12px; 
+}
+
+
+@media all and (min-width: 451px) and (max-width:750px){
+    #container{
+     width: 50%;
+    }
+
+    .i-c-o-n-s>h4{
+        font-size: 13px;
+        margin-right: 10%
+    }
+    #fclogo{
+        width: 30%;
+        height: 25px;
+    }
+
+}
+
+@media all and (min-width:100px) and (max-width:450px){
+    #container{
+        width: 80%;
+    }
+    #fclogo{
+        display: none;
+    }
+    .i-c-o-n-s>h4{
+        font-size: 13px;
+        margin-right: 10%
+    }
+} 
+
