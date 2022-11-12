@@ -1,7 +1,9 @@
 function func(){
     window.location.href="index.html"
  }
- 
+ let loggedin = {
+    login:true,
+}
  function signup_func(){
      console.log(" signup")
      window.location.href="SignUp.html"
@@ -45,6 +47,8 @@ function func(){
      document.getElementById("wrong_credential").innerText=null;
          alert("Signin Successfull :)")
         //  have to add home page path
+         
+         localStorage.setItem("loggedin",JSON.stringify(loggedin))
      window.location.href="index.html"
     }
  
@@ -125,4 +129,4 @@ function func(){
        }     
  
  
- }
+}

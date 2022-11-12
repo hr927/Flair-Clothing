@@ -1,3 +1,7 @@
+let recommend_data = [{
+        
+    }]
+
 const getData = async () => {
     try {
       let res = await fetch(
