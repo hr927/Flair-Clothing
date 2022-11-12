@@ -290,7 +290,7 @@ cursor: pointer;
   align-items: center;
 }
 
-form.example input[type=text] {
+#form1.example input[type=text] {
   padding: 10px;
   font-size: 17px;
   border: 1px solid grey;
@@ -300,7 +300,7 @@ form.example input[type=text] {
 }
 
 /* Style the submit button */
-form.example button {
+#form1.example button {
   float: left;
   width: 20%;
   padding: 10px;
@@ -312,12 +312,12 @@ form.example button {
   cursor: pointer;
 }
 
-form.example button:hover {
+#form1.example button:hover {
   background: #0b7dda;
 }
 
 /* Clear floats */
-form.example::after {
+#form1.example::after {
   content: "";
   clear: both;
   display: table;
