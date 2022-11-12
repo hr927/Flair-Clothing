@@ -1,15 +1,11 @@
-
 *{
+    font-family: Arial, Helvetica, sans-serif;
+    /* font-family: 'Archivo', sans-serif; */
+    font-size: 16px;
+    text-decoration: none;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Helvetica, sans-serif;
-}
-
-*{
-    
-    font-size: 16px;
-    text-decoration: none;
 }
 a{
     color: black;
@@ -69,15 +65,13 @@ a{
     border-radius: 5px;
     border: 1px solid grey;
 } */
-#Top-section{
+#mainPart{
     width: 90%;
     margin: 50px auto;
     display: flex;
-    height: 640px;
 }
-#Top-section>img{
+#mainPart>img{
     width: 33%;
-   
 }
 #priceDiv{
     display: flex;
@@ -92,16 +86,9 @@ a{
     padding-left: 15px;
 }
 #detail>p{
-    margin-top: 20%;
     color: grey;
     margin-bottom: 5px;
 }
-
-#detail>a{
-    color: #222222;
-    font-size: 22px;
-}
-
 .small-img-group {
     width: 60%;
     display: flex;

@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignIn</title>
+   <link rel="stylesheet" href="./Styles/Sign_in.css">
+</head>
+<body>
+   
+    <div id="fclogo">
+       <h1>FLAIR CLOTHING</h1>
+    </div>
+    <div id="container">
+        <div id="signin">
+            <div>
+                <div id="home">
+            <h2>Come on in</h2>
+            <i onclick="func()" class="fa-solid fa-x"></i>
+               </div>
+            <div id="redirect">
+                <h4>SIGN IN</h4>
+                <h4  onclick="signup_func()">I'M NEW HERE</h4>
+            </div>
+            <hr>
+            </div>
+            <div id="user_input">
+                <h5>Email address</h5>
+                <input type="text" id="email">
+                <h5>Password</h5>
+                <input type="password" id="password">
+                <div id="wrongdetials"></div>
+               <div id="keep_me_signin">
+                <input type="checkbox" id="huey" name="drone" value="True">
+              <label for="huey">Keep me signed in. What is this?</label>
+              </div>
+              <p onclick="forPassword()" id="forget">Forgot your password?</p>
+              <button onclick="signbtn()" id="signinbtn">Sign In</button>
+              <h4 id="or">OR</h4>
+              <div class="i-c-o-n-s">
+                <img src="https://cdn.freebiesupply.com/logos/large/2x/google-g-2015-logo-png-transparent.png" alt="googlelogo">
+               <h4> Continue With Google</h4>
+            </div>
+            <div class="i-c-o-n-s">
+                <img src="https://logolook.net/wp-content/uploads/2021/06/Apple-Logo.svg" alt="applelogo">
+                <h4>Continue With Apple</h4>
+            </div>
+            <div class="i-c-o-n-s">
+                <img src="https://www.edigitalagency.com.au/wp-content/uploads/Facebook-logo-blue-circle-large-transparent-png.png" alt="Facebooklogo">
+              <h4>  Continue With Facebook</h4>
+            </div>
+            <h5 onclick="Newtofc()" id="New_user">New to FLAIR CLOTHING? Register.</h5>
+        </div>
+    </div>
+</body>
+<script src="./Scripts/Sign_in.js"></script>
+</html>
