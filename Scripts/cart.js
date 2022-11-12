@@ -29,6 +29,23 @@ const myFunc = () => {
     alert("Please login first");
   }
 };
+
+let shopWo = document.querySelector("#shopWo");
+shopWo.onclick = () => {
+  mySign();
+};
+
+const mySign = () => {
+  window.location.href = "women.html";
+};
+let shopMe = document.querySelector("#shopMe");
+shopMe.onclick = () => {
+  getInspire();
+};
+
+const getInspire = () => {
+  window.location.href = "men.html";
+};
 // Get cart data function for getting the cart items from server
 const getCart = async () => {
   try {

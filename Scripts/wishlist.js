@@ -29,7 +29,7 @@ if (loggedIn) {
   document.querySelector("#default").style.display = "flex";
   document.querySelector("#loggedIn").style.display = "none";
 }
-let signInBtn = document.querySelector("#signin");
+let signInBtn = document.querySelector("#signIn");
 signInBtn.onclick = () => {
   mySign();
 };
