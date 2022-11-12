@@ -797,10 +797,10 @@ function navbar(){
           </div>
       </div>
         <div>
-          <form id="form1" class="example" action="action_page.php">
+          <div id="form1" class="example" action="action_page.php">
             <input type="text" placeholder="Search" name="search" id="srch">
             <button type="submit"><i class="fa fa-search"></i></button>
-          </form>
+          </div>
         </div>
     </div>
     </div>`
