@@ -15,6 +15,17 @@ navbar_div.innerHTML = navbar();
 import footer from "../Components/footer.js";
 let footer_div = document.getElementById("footer");
 footer_div.innerHTML = footer();
+
+let loggedIn = JSON.parse(localStorage.getItem("loggedin"));
+let continueBtn = document.querySelector("#checkOut");
+
+if (loggedIn) {
+  continueBtn.onclick = () => {
+    window.location.href = "address.html";
+  };
+} else {
+  alert("Please login first!");
+}
 // Get cart data function for getting the cart items from server
 const getCart = async () => {
   try {

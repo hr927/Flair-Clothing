@@ -127,14 +127,14 @@ const botSignUp = () => {
 };
 getData();
 let prodSizes = ["XS", "S", "M", "L", "XL"];
-let logIn = false;
-let defaultDiv = document.querySelector("#default");
-let userDiv = document.querySelector("#loggedIn");
-if (logIn === false) {
-  userDiv.style.display = "none";
-} else {
-  defaultDiv.style.display = "none";
-}
+// let logIn = false;
+// let defaultDiv = document.querySelector("#default");
+// let userDiv = document.querySelector("#loggedIn");
+// if (logIn === false) {
+//   userDiv.style.display = "none";
+// } else {
+//   defaultDiv.style.display = "none";
+// }
 // function to append data on DOM
 const appendData = (arr) => {
   let wishmessage = document.querySelector("#wishMessage");
