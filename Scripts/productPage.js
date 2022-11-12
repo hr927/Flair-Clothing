@@ -1,4 +1,10 @@
+import navbar from "../Components/navbar.js"
+let navbar_div = document.getElementById("navbar");
+navbar_div.innerHTML = navbar();
 
+import footer from "../Components/footer.js";
+let footer_div = document.getElementById("footer");
+footer_div.innerHTML = footer();
 
 let sort_btn = document.getElementById("sort_btn");
 let count = 0;
