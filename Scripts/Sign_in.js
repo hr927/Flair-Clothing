@@ -1,9 +1,9 @@
 function func(){
     window.location.href="index.html"
  }
-let loggedin={
-    login: true,
- }
+// let loggedin={
+//     login: true,
+//  }
  function signup_func(){
      console.log(" signup")
      window.location.href="SignUp.html"
