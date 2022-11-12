@@ -109,6 +109,7 @@ const appendData = (data)=>{
     let change = document.createElement("a");
     change.innerText = "change";
     change.href = "address.html";
+    change.style.color = "black";
     billing_add.append(name,address,change); 
     });
 }
