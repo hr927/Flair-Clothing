@@ -1,40 +1,25 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Navbar</title>
-    <link rel="stylesheet" href="/Styles/navbar.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-</head>
-<body>
-       <div id="hn1">
-        <p>Incoming</p>
-        <p>|</p>
-        <p><a href="">Shop the latest arrivals</a></p>
-    </div>
-   <div id="mnp">
+function navbar(){
+    return `<div id="mnp">
     <div>
         <div>
             <div>
-                <p><a href="">Womens</a></p>
-                <p><a href="">Mens</a></p>
-                <p><a href="">Kids</a></p>
+                <p><a href="women.html">Womens</a></p>
+                <p><a href="men.html">Mens</a></p>
+                <p><a href="productPage.html">Kids</a></p>
             </div>
             <div>
                 <a id="hmb" href="./index.html"><h1 >FlairClothings</h1></a>
             </div>
             <!-- <div id="lgn">
-
+    
             </div> -->
             
         </div>
         <div id="lgn">
           <a href=""><img src="https://cdn2.iconfinder.com/data/icons/flags-68/48/India-512.png"  alt=""></a>
-          <a href=""><img src="https://banner2.cleanpng.com/20180622/tqt/kisspng-computer-icons-user-clip-art-consignee-5b2d25107181a2.1674732415296852644649.jpg"  alt=""></a>
-          <a href=""><img src="https://static.thenounproject.com/png/3386813-200.png"  alt=""></a>
-          <a href=""><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0p3F_SVGiLZ6phycrnYGLPS0c_nZSqJ9cS68LC656upBhPLo9kGdgQBM0Qt2ASprXpk0&usqp=CAU"  alt=""></a>
+          <a href="SignUp.html"><img src="https://banner2.cleanpng.com/20180622/tqt/kisspng-computer-icons-user-clip-art-consignee-5b2d25107181a2.1674732415296852644649.jpg"  alt=""></a>
+          <a href="wishlist.html"><img src="https://static.thenounproject.com/png/3386813-200.png"  alt=""></a>
+          <a href="cart.html"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0p3F_SVGiLZ6phycrnYGLPS0c_nZSqJ9cS68LC656upBhPLo9kGdgQBM0Qt2ASprXpk0&usqp=CAU"  alt=""></a>
         </div>
     </div>
     <div id="snp">
@@ -818,7 +803,7 @@
           </form>
         </div>
     </div>
-    </div>
-   </div>
-</body>
-</html>
+    </div>`
+
+}
+export default navbar
