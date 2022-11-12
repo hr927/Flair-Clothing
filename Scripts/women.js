@@ -1,3 +1,7 @@
+import navbar from "../Components/navbar.js";
+let navdiv=document.querySelector("#navbar")
+navdiv.innerHTML=navbar()
+
 let data = [
     {
         image_url: ["https://cdn-images.farfetch-contents.com/19/10/05/61/19100561_42312996_1000.jpg","https://cdn-images.farfetch-contents.com/19/10/05/61/19100561_42315391_1000.jpg","https://cdn-images.farfetch-contents.com/19/10/05/61/19100561_42314896_1000.jpg","https://cdn-images.farfetch-contents.com/19/10/05/61/19100561_42315400_1000.jpg"],
@@ -208,7 +212,7 @@ const appended = (datas)=>{
         div.append(top,image,seasons,name,description,price);
         
         items.append(div);
-        div.onclick = ()=>{
+        image.onclick = ()=>{
             if(count2===0){
                 getTheData(el);
                 count2++;
@@ -216,6 +220,9 @@ const appended = (datas)=>{
                 getTheData2(el);
                 count2++;
             }
+        };
+        wish.onclick = ()=>{
+            wishData2(el);
         };
     });
 }
@@ -247,7 +254,23 @@ const getTheData2 = async(el)=>{
     window.location.href='product_details.html'
 }
 
+const wishData2 = async(el)=>{
+    let res = await fetch(`https://infinite-fortress-00447.herokuapp.com/wishlist`,{
+        method: 'POST',
+        body: JSON.stringify(el),
+        headers: {
+            'Content-Type': 'application/json'
+        },
+    });
+    let data = await res.json();
+    console.log(data);
+}
+
 // Bottom section reusable
 import bottom from "../Components/bottom.js";
 let bottomDiv = document.querySelector("#bottomsec");
 bottomDiv.innerHTML = bottom();
+
+import footer from "../Components/footer.js";
+let footerdiv = document.querySelector("#footer");
+footerdiv.innerHTML=footer();

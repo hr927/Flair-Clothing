@@ -1,3 +1,8 @@
+import navbar from "../Components/navbar.js";
+let navdiv=document.querySelector("#navbar")
+navdiv.innerHTML=navbar()
+
+
 var coll = document.getElementsByClassName("collapsible");
 var i;
 
@@ -12,3 +17,7 @@ for (i = 0; i < coll.length; i++) {
     }
   });
 }
+
+import footer from "../Components/footer.js";
+let footerdiv = document.querySelector("#footer");
+footerdiv.innerHTML=footer();
