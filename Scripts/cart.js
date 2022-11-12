@@ -27,6 +27,7 @@ const myFunc = () => {
     window.location.href = "address.html";
   } else {
     alert("Please login first");
+    window.location.href = "Sign_in.html";
   }
 };
 
