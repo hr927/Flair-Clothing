@@ -19,13 +19,34 @@ footer_div.innerHTML = footer();
 let loggedIn = JSON.parse(localStorage.getItem("loggedin"));
 let continueBtn = document.querySelector("#checkOut");
 
-if (loggedIn) {
-  continueBtn.onclick = () => {
+continueBtn.onclick = () => {
+  myFunc();
+};
+const myFunc = () => {
+  if (loggedIn) {
     window.location.href = "address.html";
-  };
-} else {
-  alert("Please login first!");
-}
+  } else {
+    alert("Please login first");
+    window.location.href = "Sign_in.html";
+  }
+};
+
+let shopWo = document.querySelector("#shopWo");
+shopWo.onclick = () => {
+  mySign();
+};
+
+const mySign = () => {
+  window.location.href = "women.html";
+};
+let shopMe = document.querySelector("#shopMe");
+shopMe.onclick = () => {
+  getInspire();
+};
+
+const getInspire = () => {
+  window.location.href = "men.html";
+};
 // Get cart data function for getting the cart items from server
 const getCart = async () => {
   try {

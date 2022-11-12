@@ -29,6 +29,22 @@ if (loggedIn) {
   document.querySelector("#default").style.display = "flex";
   document.querySelector("#loggedIn").style.display = "none";
 }
+let signInBtn = document.querySelector("#signIn");
+signInBtn.onclick = () => {
+  mySign();
+};
+
+const mySign = () => {
+  window.location.href = "Sign_in.html";
+};
+let inspire = document.querySelector("#getInspired");
+inspire.onclick = () => {
+  getInspire();
+};
+
+const getInspire = () => {
+  window.location.href = "productPage.html";
+};
 // User data base on LS
 let fcUser = JSON.parse(localStorage.getItem("fcUser")) || [];
 

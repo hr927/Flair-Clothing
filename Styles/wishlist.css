@@ -10,6 +10,7 @@
   background: white;
   display: flex;
   flex-direction: column;
+  padding-top: 200px;
 }
 
 #default {
