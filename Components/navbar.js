@@ -8,7 +8,7 @@ function navbar(){
                 <p><a href="productPage.html">Kids</a></p>
             </div>
             <div>
-                <a id="hmb" href="./index.html"><h1 >FlairClothings</h1></a>
+                <a id="hmb" href="index.html"><h1 >FlairClothings</h1></a>
             </div>
             <!-- <div id="lgn">
     
