@@ -1,4 +1,72 @@
 
+let recommend_data = [
+    {
+        image_url: ["https://cdn-images.farfetch-contents.com/19/21/96/27/19219627_42198739_1000.jpg", "https://cdn-images.farfetch-contents.com/19/21/96/27/19219627_42199331_1000.jpg", "https://cdn-images.farfetch-contents.com/19/21/96/27/19219627_42200236_1000.jpg", "https://cdn-images.farfetch-contents.com/19/21/96/27/19219627_42198740_1000.jpg"],
+        seasons: "New Season",
+        name: "Rhude",
+        description: "logo-print detail T-shirt",
+        price: `370`,
+        highlights: ["white/blue", "cotton", "logo print to the front", "round neck"],
+        composition: "Cotton 100%",
+        productId: "FARFETCH ID: 19219627",
+        quantity: "1"
+    },
+    {
+        image_url: ["https://cdn-images.farfetch-contents.com/18/90/37/16/18903716_41087054_1000.jpg", "https://cdn-images.farfetch-contents.com/18/90/37/16/18903716_41087056_1000.jpg", "https://cdn-images.farfetch-contents.com/18/90/37/16/18903716_41087058_1000.jpg", "https://cdn-images.farfetch-contents.com/18/90/37/16/18903716_41088078_1000.jpg"],
+        seasons: "New Season",
+        name: "Dion Lee",
+        description: "lace up bell-sleeve blouse",
+        price: `1240`,
+        highlights: ["black", "semi-sheer construction", "V-neck", "front lace-up fastening"],
+        composition: "Silk 100%",
+        productId: "FARFETCH ID: 18903716",
+        quantity: "1"
+    },
+    {
+        image_url: ["https://cdn-images.farfetch-contents.com/18/04/17/94/18041794_38648000_1000.jpg", "https://cdn-images.farfetch-contents.com/18/04/17/94/18041794_38648009_1000.jpg", "https://cdn-images.farfetch-contents.com/18/04/17/94/18041794_38647603_1000.jpg", "https://cdn-images.farfetch-contents.com/18/04/17/94/18041794_38648002_1000.jpg"],
+        seasons: "New Season",
+        name: "Nanushka",
+        description: "animal-print organic-cotton shirt",
+        price: `764`,
+        highlights: ["nude/dark brown", "organic cotton", "animal print", "front button fastening"],
+        composition: "Organic Cotton 100%",
+        productId: "FARFETCH ID: 18041794",
+        quantity: "1"
+    },
+    {
+        image_url: ["https://cdn-images.farfetch-contents.com/18/03/77/49/18037749_41625527_1000.jpg", "https://cdn-images.farfetch-contents.com/18/03/77/49/18037749_41468641_1000.jpg", "https://cdn-images.farfetch-contents.com/18/03/77/49/18037749_41467499_1000.jpg", "https://cdn-images.farfetch-contents.com/18/03/77/49/18037749_41467490_1000.jpg"],
+        seasons: "New Season",
+        name: "BOSS",
+        description: "buckle-detail tote bag",
+        price: `502`,
+        highlights: ["black/white", "all-over logo print", "front zip fastening pockets", "single rounded top handle"],
+        composition: "Polyester 100%",
+        productId: "FARFETCH ID: 18037749",
+        quantity: "1"
+    }
+];
+
+let recommend = document.getElementById("recommended")
+const re_data = (data) => {
+    
+    data.forEach(function (ele) {
+        let card = document.createElement("div");
+        card.setAttribute("class", "card");
+       
+        let image = document.createElement("img");
+        image.src = ele.image_url[1];
+        let name = document.createElement("p");
+        name.innerText = ele.name;
+        let description = document.createElement("p");
+        description.innerText = ele.description;
+        let price = document.createElement("p");
+        price.innerText = "$"+(+ele.price)
+        card.append(image, name, description, price,);
+        recommend.append(card);
+
+    })
+}
+re_data(recommend_data)
 
 const getData = async () => {
     try {
