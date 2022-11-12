@@ -42,6 +42,7 @@ let data = [
     
 ];
 console.log(data);
+let count1=0;
 const append = (data)=>{
     let products = document.getElementById("products");
     products.innerHTML = null;
@@ -75,16 +76,50 @@ const append = (data)=>{
         div.append(top,image,seasons,name,description,price);
         
         products.append(div);
-        div.onclick = ()=>{
-            getData(el);
+        image.onclick = ()=>{
+            if(count1===0){
+                getData(el);
+                count1++;
+            } else if(count1>0){
+                getData2(el);
+                count1++;
+            }
+        };
+        wish.onclick = ()=>{
+            wishData(el);
         };
     });
 }
 append(data);
 
 const getData = async(el)=>{
+    let res = await fetch(`https://infinite-fortress-00447.herokuapp.com/product`,{
+        method: 'POST',
+        body: JSON.stringify(el),
+        headers: {
+            'Content-Type': 'application/json'
+        },
+    });
+    let data = await res.json();
+    console.log(data);
+    window.location.href='product_details.html'
+}
+
+const getData2 = async(el)=>{
     let res = await fetch(`https://infinite-fortress-00447.herokuapp.com/product/1`,{
         method: 'PUT',
+        body: JSON.stringify(el),
+        headers: {
+            'Content-Type': 'application/json'
+        },
+    });
+    let data = await res.json();
+    console.log(data);
+    window.location.href='product_details.html'
+}
+const wishData = async(el)=>{
+    let res = await fetch(`https://infinite-fortress-00447.herokuapp.com/wishlist`,{
+        method: 'POST',
         body: JSON.stringify(el),
         headers: {
             'Content-Type': 'application/json'
@@ -139,6 +174,7 @@ let datas = [
     
 ];
 console.log(datas);
+let count2=0;
 const appended = (datas)=>{
     let items = document.getElementById("items");
     items.innerHTML = null;
@@ -173,13 +209,32 @@ const appended = (datas)=>{
         
         items.append(div);
         div.onclick = ()=>{
-            getTheData(el);
+            if(count2===0){
+                getTheData(el);
+                count2++;
+            } else if(count2>0){
+                getTheData2(el);
+                count2++;
+            }
         };
     });
 }
 appended(datas);
 
 const getTheData = async(el)=>{
+    let res = await fetch(`https://infinite-fortress-00447.herokuapp.com/product`,{
+        method: 'POST',
+        body: JSON.stringify(el),
+        headers: {
+            'Content-Type': 'application/json'
+        },
+    });
+    let data = await res.json();
+    console.log(data);
+    window.location.href='product_details.html'
+}
+
+const getTheData2 = async(el)=>{
     let res = await fetch(`https://infinite-fortress-00447.herokuapp.com/product/1`,{
         method: 'PUT',
         body: JSON.stringify(el),
@@ -189,4 +244,10 @@ const getTheData = async(el)=>{
     });
     let datas = await res.json();
     console.log(datas);
+    window.location.href='product_details.html'
 }
+
+// Bottom section reusable
+import bottom from "../Components/bottom.js";
+let bottomDiv = document.querySelector("#bottomsec");
+bottomDiv.innerHTML = bottom();

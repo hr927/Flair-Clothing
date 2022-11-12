@@ -144,7 +144,7 @@ margin: 0%;
     grid-template-columns: repeat(3,1fr);
     gap:20px;
     margin: auto;
-    margin-bottom: 280px;
+    margin-bottom: 100px;
 }
 #section7>div{
 border: 1px solid gray;
