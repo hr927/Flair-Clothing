@@ -216,7 +216,7 @@ const appended = (datas)=>{
         div.append(top,image,seasons,name,description,price);
         
         items.append(div);
-        div.onclick = ()=>{
+        image.onclick = ()=>{
             if(count2===0){
                 getTheData(el);
                 count2++;

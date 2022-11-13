@@ -85,7 +85,7 @@ const append = (data)=>{
         div.append(top,image,seasons,name,description,price);
         
         products.append(div);
-        div.onclick = ()=>{
+        image.onclick = ()=>{
             if(count1===0){
                 getData(el);
                 count1++;
@@ -218,7 +218,7 @@ const appended = (datas)=>{
         div.append(top,image,seasons,name,description,price);
         
         items.append(div);
-        div.onclick = ()=>{
+        image.onclick = ()=>{
             if(count2===0){
                 getTheData(el);
                 count2++;

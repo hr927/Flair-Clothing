@@ -109,12 +109,14 @@ margin: 0%;
     justify-content: space-between;
     font-size: 18px;
     margin: auto;
+    margin-bottom: 30px;
 }
 #section4>button{
     font-size: 20px;
     border-radius: 8px;
     font-weight: bold;
     background: transparent;
+    padding: 5px;
 }
 #section2>div>a{
     color: black;  
