@@ -101,20 +101,7 @@ const append = (data)=>{
 append(data);
 
 const getData = async(el)=>{
-    let res = await fetch(`https://infinite-fortress-00447.herokuapp.com/product`,{
-        method: 'POST',
-        body: JSON.stringify(el),
-        headers: {
-            'Content-Type': 'application/json'
-        },
-    });
-    let data = await res.json();
-    console.log(data);
-    window.location.href='product_details.html'
-}
-
-const getData2 = async(el)=>{
-    let res = await fetch(`https://infinite-fortress-00447.herokuapp.com/product/1`,{
+    let res = await fetch(`https://warm-earth-75082.herokuapp.com/product/1`,{
         method: 'PUT',
         body: JSON.stringify(el),
         headers: {
@@ -124,6 +111,21 @@ const getData2 = async(el)=>{
     let data = await res.json();
     console.log(data);
     window.location.href='product_details.html'
+    // console.log('post')
+}
+
+const getData2 = async(el)=>{
+    let res = await fetch(`https://warm-earth-75082.herokuapp.com/product/1`,{
+        method: 'PUT',
+        body: JSON.stringify(el),
+        headers: {
+            'Content-Type': 'application/json'
+        },
+    });
+    let data = await res.json();
+    console.log(data);
+    window.location.href='product_details.html'
+    //console.log('Put')
 }
 const wishData = async(el)=>{
     let res = await fetch(`https://infinite-fortress-00447.herokuapp.com/wishlist`,{
@@ -182,7 +184,7 @@ let datas = [
     
 ];
 console.log(datas);
-let count2=0;
+
 const appended = (datas)=>{
     let items = document.getElementById("items");
     items.innerHTML = null;
@@ -217,60 +219,67 @@ const appended = (datas)=>{
         
         items.append(div);
         image.onclick = ()=>{
-            if(count2===0){
-                getTheData(el);
-                count2++;
-            } else if(count2>0){
-                getTheData2(el);
-                count2++;
+            if(count1===0){
+                getData(el);
+                count1++;
+            } else if(count1>0){
+                getData2(el);
+                count1++;
             }
         };
         wish.onclick = ()=>{
-            wishData2(el);
+            wishData(el);
         };
     });
 }
 appended(datas);
 
-const getTheData = async(el)=>{
-    let res = await fetch(`https://infinite-fortress-00447.herokuapp.com/product`,{
-        method: 'POST',
-        body: JSON.stringify(el),
-        headers: {
-            'Content-Type': 'application/json'
-        },
-    });
-    let data = await res.json();
-    console.log(data);
-    window.location.href='product_details.html'
-}
 
-const getTheData2 = async(el)=>{
-    let res = await fetch(`https://infinite-fortress-00447.herokuapp.com/product/1`,{
-        method: 'PUT',
-        body: JSON.stringify(el),
-        headers: {
-            'Content-Type': 'application/json'
-        },
-    });
-    let datas = await res.json();
-    console.log(datas);
-    window.location.href='product_details.html'
-}
 
-const wishData2 = async(el)=>{
-    let res = await fetch(`https://infinite-fortress-00447.herokuapp.com/wishlist`,{
-        method: 'POST',
-        body: JSON.stringify(el),
-        headers: {
-            'Content-Type': 'application/json'
-        },
-    });
-    let data = await res.json();
-    console.log(data);
-}
+
 
 // Bottom section reusable
 import bottom from "../Components/bottom.js";
 let bottomDiv = document.querySelector("#bottomsec");
 bottomDiv.innerHTML = bottom();
+
+const dataadd=async(el)=>{
+    try{
+        let res=await fetch('https://warm-earth-75082.herokuapp.com/product',{
+            method:'POST',
+            body: JSON.stringify(el),
+            headers:{
+                'Content-Type':'application/json',
+            }
+        })
+let data=await res.json();
+console.log('inside');
+    }
+    catch(err){
+        console.log('err')
+    }
+}
+let prod={
+    "image_url": [
+      "https://cdn-images.farfetch-contents.com/14/57/76/98/14577698_29297010_1000.jpg",
+      "https://cdn-images.farfetch-contents.com/14/57/76/98/14577698_29298043_1000.jpg",
+      "https://cdn-images.farfetch-contents.com/14/57/76/98/14577698_29298045_1000.jpg",
+      "https://cdn-images.farfetch-contents.com/14/57/76/98/14577698_29298044_1000.jpg"
+    ],
+    "seasons": "New Season",
+    "name": "Anissa Kermiche",
+    "description": "Love Handles vase (33cm)",
+    "price": "646",
+    "highlights": [
+      "royal blue",
+      "porcelain,glazed finish",
+      "curve-edge body",
+      "two rounded handles to the sides",
+      "wide neck"
+    ],
+    "composition": "Ceramic 100%",
+    "productId": "FARFETCH ID: 14577698",
+    "id": 1
+  }
+
+  dataadd(prod);

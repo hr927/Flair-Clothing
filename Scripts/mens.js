@@ -102,8 +102,8 @@ const append = (data)=>{
 append(data);
 
 const getData = async(el)=>{
-    let res = await fetch(`https://infinite-fortress-00447.herokuapp.com/product`,{
-        method: 'POST',
+    let res = await fetch(`https://warm-earth-75082.herokuapp.com/product/1`,{
+        method: 'PUT',
         body: JSON.stringify(el),
         headers: {
             'Content-Type': 'application/json'
@@ -115,7 +115,7 @@ const getData = async(el)=>{
 }
 
 const getData2 = async(el)=>{
-    let res = await fetch(`https://infinite-fortress-00447.herokuapp.com/product/1`,{
+    let res = await fetch(`https://warm-earth-75082.herokuapp.com/product/1`,{
         method: 'PUT',
         body: JSON.stringify(el),
         headers: {
@@ -184,7 +184,7 @@ let datas = [
     
 ];
 console.log(datas);
-let count2=0;
+
 const appended = (datas)=>{
     let items = document.getElementById("items");
     items.innerHTML = null;
@@ -219,58 +219,21 @@ const appended = (datas)=>{
         
         items.append(div);
         image.onclick = ()=>{
-            if(count2===0){
-                getTheData(el);
-                count2++;
-            } else if(count2>0){
-                getTheData2(el);
-                count2++;
+            if(count1===0){
+                getData(el);
+                count1++;
+            } else if(count1>0){
+                getData2(el);
+                count1++;
             }
         };
         wish.onclick = ()=>{
-            wishData2(el);
+            wishData(el);
         };
     });
 }
 appended(datas);
 
-const getTheData = async(el)=>{
-    let res = await fetch(`https://infinite-fortress-00447.herokuapp.com/product`,{
-        method: 'POST',
-        body: JSON.stringify(el),
-        headers: {
-            'Content-Type': 'application/json'
-        },
-    });
-    let data = await res.json();
-    console.log(data);
-    window.location.href='product_details.html'
-}
-
-const getTheData2 = async(el)=>{
-    let res = await fetch(`https://infinite-fortress-00447.herokuapp.com/product/1`,{
-        method: 'PUT',
-        body: JSON.stringify(el),
-        headers: {
-            'Content-Type': 'application/json'
-        },
-    });
-    let datas = await res.json();
-    console.log(datas);
-    window.location.href='product_details.html'
-}
-
-const wishData2 = async(el)=>{
-    let res = await fetch(`https://infinite-fortress-00447.herokuapp.com/wishlist`,{
-        method: 'POST',
-        body: JSON.stringify(el),
-        headers: {
-            'Content-Type': 'application/json'
-        },
-    });
-    let data = await res.json();
-    console.log(data);
-}
 
 
 // Bottom section reusable
