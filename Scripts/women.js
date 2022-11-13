@@ -1,3 +1,11 @@
+import navbar from "../Components/navbar.js"
+let navbar_div = document.getElementById("navbar");
+navbar_div.innerHTML = navbar();
+
+import footer from "../Components/footer.js";
+let footer_div = document.getElementById("footer");
+footer_div.innerHTML = footer();
+
 let data = [
     {
         image_url: ["https://cdn-images.farfetch-contents.com/19/10/05/61/19100561_42312996_1000.jpg","https://cdn-images.farfetch-contents.com/19/10/05/61/19100561_42315391_1000.jpg","https://cdn-images.farfetch-contents.com/19/10/05/61/19100561_42314896_1000.jpg","https://cdn-images.farfetch-contents.com/19/10/05/61/19100561_42315400_1000.jpg"],
@@ -14,7 +22,7 @@ let data = [
         seasons: "New Season",
         name: "Valentino Garavani",
         description: "Tan-Go 165mm platform pumps",
-        price: `2,172`,
+        price: `2172`,
         highlights: ["white,calf leather","gold-tone hardware","VLogo Signature","pointed toe","buckle-fastening ankle strap","branded insole","platform sole","high block heel"],
         composition: ["Outer: Calf Leather 100%", "Sole: Calf Leather 100%", "Lining: Goat Skin 100%"],
         productId: "FARFETCH ID: 18744063"
@@ -24,7 +32,7 @@ let data = [
         seasons: "New Season",
         name: "Gucci",
         description: "GG logo-plaque shoulder bag",
-        price: `2,100`,
+        price: `2100`,
         highlights: ["off-white/mandarin","calf leather","gold-tone logo plaque","foldover top","chain-link shoulder strap","main compartment"],
         composition: "Outer: Calf Leather 100%",
         productId: "FARFETCH ID: 19096614",
@@ -135,7 +143,7 @@ let datas = [
         seasons: "New Season",
         name: "Prada",
         description: "small brushed tote bag",
-        price: `4,490`,
+        price: `4490`,
         highlights: ["white","leather","debossed logo to the front","brushed effect","top zip fastening","two rounded top handles","adjustable detachable shoulder strap"],
         composition: "Outer: Leather 100%",
         productId: "FARFETCH ID: 18582618"
@@ -145,7 +153,7 @@ let datas = [
         seasons: "New Season",
         name: "Manolo Blahnik",
         description: "blue Hangisi 70 silk satin leather pumps",
-        price: `2,241`,
+        price: `2241`,
         highlights: ["Made in Italy"],
         composition: ["Outer: Silk Satin 100%","Lining: Leather 100%","Sole: Leather 100%"],
         productId: "FARFETCH ID: 13150128"
@@ -217,6 +225,9 @@ const appended = (datas)=>{
                 count2++;
             }
         };
+        wish.onclick = ()=>{
+            wishData2(el);
+        };
     });
 }
 appended(datas);
@@ -245,6 +256,18 @@ const getTheData2 = async(el)=>{
     let datas = await res.json();
     console.log(datas);
     window.location.href='product_details.html'
+}
+
+const wishData2 = async(el)=>{
+    let res = await fetch(`https://infinite-fortress-00447.herokuapp.com/wishlist`,{
+        method: 'POST',
+        body: JSON.stringify(el),
+        headers: {
+            'Content-Type': 'application/json'
+        },
+    });
+    let data = await res.json();
+    console.log(data);
 }
 
 // Bottom section reusable

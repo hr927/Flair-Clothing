@@ -1,3 +1,11 @@
+import navbar from "../Components/navbar.js"
+let navbar_div = document.getElementById("navbar");
+navbar_div.innerHTML = navbar();
+
+import footer from "../Components/footer.js";
+let footer_div = document.getElementById("footer");
+footer_div.innerHTML = footer();
+
 
 let data = [
     {
@@ -5,7 +13,7 @@ let data = [
         seasons: "New Season",
         name: "VTMNTS",
         description: "barcode-print drawstring-fastening hoodie",
-        price: `1,104`,
+        price: `1104`,
         highlights: ["white,cotton blend","barcode print","drawstring hood","front pouch pocket","long sleeves","elasticated hem"],
         composition: "Cotton 80%, Polyester 20%",
         productId: "FARFETCH ID: 19278398"
@@ -25,7 +33,7 @@ let data = [
         seasons: "New Season",
         name: "Prada",
         description: "tapered wool trousers",
-        price: `1,710`,
+        price: `1710`,
         highlights: ["navy blue","wool,belt loops","front button and zip fastening","two side slit pockets","rear welt pocket","tapered leg","ribbed cuffs"],
         composition: "Wool 100%",
         productId: "FARFETCH ID: 19271935",
@@ -35,7 +43,7 @@ let data = [
         seasons: "New Season",
         name: "Jil Sander",
         description: "logo-plaque leather boots",
-        price: `3,813`,
+        price: `3813`,
         highlights: ["black","calf leather","pointed toe","gold-tone logo plaque","side zip fastening","flat sole"],
         composition: ["Outer: Calf Leather 100%","Lining: Calf Leather 100%","Sole: Calf Leather 50%, Rubber 50%"],
         productId: "FARFETCH ID: 19137697",
@@ -86,6 +94,9 @@ const append = (data)=>{
                 count1++;
             }
         };
+        wish.onclick = ()=>{
+            wishData(el);
+        };
     });
 }
 append(data);
@@ -116,6 +127,18 @@ const getData2 = async(el)=>{
     window.location.href='product_details.html'
 }
 
+const wishData = async(el)=>{
+    let res = await fetch(`https://infinite-fortress-00447.herokuapp.com/wishlist`,{
+        method: 'POST',
+        body: JSON.stringify(el),
+        headers: {
+            'Content-Type': 'application/json'
+        },
+    });
+    let data = await res.json();
+    console.log(data);
+}
+
 let datas = [
     {
         image_url: ["https://cdn-images.farfetch-contents.com/18/34/30/11/18343011_42222448_1000.jpg","https://cdn-images.farfetch-contents.com/18/34/30/11/18343011_42222449_1000.jpg"],
@@ -132,7 +155,7 @@ let datas = [
         seasons: "New Season",
         name: "Mastermind Japan",
         description: "skull-motif tote bag",
-        price: `1,483`,
+        price: `1483`,
         highlights: ["black/white","calf leather","silver-tone hardware","skull motif","main compartment","removable pouch","two long top handles"],
         composition: "Calf Leather 100%",
         productId: "FARFETCH ID: 19185817"
@@ -204,6 +227,9 @@ const appended = (datas)=>{
                 count2++;
             }
         };
+        wish.onclick = ()=>{
+            wishData2(el);
+        };
     });
 }
 appended(datas);
@@ -232,6 +258,18 @@ const getTheData2 = async(el)=>{
     let datas = await res.json();
     console.log(datas);
     window.location.href='product_details.html'
+}
+
+const wishData2 = async(el)=>{
+    let res = await fetch(`https://infinite-fortress-00447.herokuapp.com/wishlist`,{
+        method: 'POST',
+        body: JSON.stringify(el),
+        headers: {
+            'Content-Type': 'application/json'
+        },
+    });
+    let data = await res.json();
+    console.log(data);
 }
 
 
