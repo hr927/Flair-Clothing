@@ -243,8 +243,8 @@ const getData = async () => {
           'Content-Type': 'application/json'
         }
       })
-      let data = await res.json()
-      console.log(data)
+      let wish_d = await res.json()
+      console.log(wish_d)
     }catch(error){
       console.log(error)
     }
