@@ -1,3 +1,15 @@
+import navbar from '../Components/navbar.js';
+let nav_div = document.getElementById("navbar");
+nav_div.innerHTML = navbar();
+
+import footer from '../Components/footer.js';
+let footer_div = document.getElementById("footer");
+footer_div.innerHTML = footer();
+
+import bottom from '../Components/bottom.js'
+let bottom_div = document.getElementById("bottom");
+bottom_div.innerHTML = bottom();
+
 let recommend_data = [
     {
         image_url: ["https://cdn-images.farfetch-contents.com/19/21/96/27/19219627_42198739_1000.jpg", "https://cdn-images.farfetch-contents.com/19/21/96/27/19219627_42199331_1000.jpg", "https://cdn-images.farfetch-contents.com/19/21/96/27/19219627_42200236_1000.jpg", "https://cdn-images.farfetch-contents.com/19/21/96/27/19219627_42198740_1000.jpg"],
@@ -72,10 +84,11 @@ re_data(recommend_data)
 const getData = async () => {
     try {
       let res = await fetch(
-        `https://infinite-fortress-00447.herokuapp.com/product/1`
+        `https://warm-earth-75082.herokuapp.com/product/1
+        `
       );
       let data = await res.json();
-      console.log(data);
+      
         append_data(data)
         console.log("get",data)
     } catch (error) {
@@ -133,18 +146,20 @@ const getData = async () => {
     let addtobag = document.createElement("button");
     addtobag.innerText = "Add To Bag";
     addtobag.setAttribute("class", "addtobag");
-    addtobag.addEventListener("click",()=>{
-        window.location.href = "cart.html"
-        add_cart(data)
+    addtobag.addEventListener("click", () => {
+      add_cart(data)
+        
+       
     })
 
     let wishbtn = document.createElement("button");
     wishbtn.innerHTML ="Wishlist"
    wishbtn.setAttribute("class","wishbtn")
    
-    wishbtn.addEventListener("click",()=>{
-      window.location.href="wishlist.html"
+    wishbtn.addEventListener("click", () => {
       wishbtn_data(data)
+     
+     
     })
 
     let delivery = document.createElement("p");
@@ -243,8 +258,10 @@ const getData = async () => {
           'Content-Type': 'application/json'
         }
       })
+      console.log("wish")
       let wish_d = await res.json()
       console.log(wish_d)
+      window.location.href="wishlist.html"
     }catch(error){
       console.log(error)
     }
@@ -258,6 +275,8 @@ const add_cart =async (el) => {
         }
        
     })
+  console.log("cart")
     let data = await res.json()
-    console.log("bag:",data)
+  console.log("bag:", data)
+  window.location.href = "cart.html"
 }
