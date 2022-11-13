@@ -162,7 +162,7 @@ const append = (arr)=>{
                 count1++;
             } else if(count1>0){
                 getData2(el);
-                count++;
+                count1++;
             }
             
         };
@@ -176,8 +176,8 @@ append(data);
 
 
 const getData = async(el)=>{
-    let res = await fetch(`https://infinite-fortress-00447.herokuapp.com/product`,{
-        method: 'POST',
+    let res = await fetch(`https://warm-earth-75082.herokuapp.com/product/1`,{
+        method: 'PUT',
         body: JSON.stringify(el),
         headers: {
             'Content-Type': 'application/json'
@@ -188,7 +188,7 @@ const getData = async(el)=>{
     window.location.href = "product_details.html";
 }
 const getData2 = async(el)=>{
-    let res = await fetch(`https://infinite-fortress-00447.herokuapp.com/product/1`,{
+    let res = await fetch(`https://warm-earth-75082.herokuapp.com/product/1`,{
         method: 'PUT',
         body: JSON.stringify(el),
         headers: {
