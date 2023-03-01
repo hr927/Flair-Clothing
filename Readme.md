@@ -1,3 +1,4 @@
+<h1> Netlify link:- https://reliable-tiramisu-cba0a4.netlify.app/ </h1>
 <h1>Flair Clothing</h1>
 
 <h2>Description : </h2><h3>FlairClothings is an ecommerce website for love of fashion. Our mission is to be the global platform for luxury fashion connecting creators, curators and customers</h3>
