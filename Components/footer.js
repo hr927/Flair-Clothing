@@ -12,12 +12,12 @@ function footer(){
             <p>FOLLOW US</p>
             <br>
             <div id="lp">
-                <img src="https://scontent.fpat2-1.fna.fbcdn.net/v/t39.30808-6/313435269_1764951673879962_2767049279257891871_n.jpg?stp=cp0_dst-jpg&_nc_cat=102&ccb=1-7&_nc_sid=730e14&_nc_ohc=mC5vQQTAixkAX8FjOT6&_nc_ht=scontent.fpat2-1.fna&oh=00_AfCgWXZds8zlwH3ahsEwjUNMYiTdgJSt6KVDXYiAjWTqFQ&oe=6371317D" alt="">
-                <img src="https://scontent.fpat2-3.fna.fbcdn.net/v/t39.30808-6/313425054_1764951653879964_4392626476403129399_n.jpg?stp=cp0_dst-jpg&_nc_cat=104&ccb=1-7&_nc_sid=730e14&_nc_ohc=qaI9G2A39gkAX81dzH-&_nc_ht=scontent.fpat2-3.fna&oh=00_AfCejfHq5F593kC5gz-8HEkAdarte0gR6EAcEws99IIskA&oe=63716AB1" alt="">
-                <img src="https://scontent.fpat2-2.fna.fbcdn.net/v/t39.30808-6/313425246_1764951663879963_5668423944383030283_n.jpg?stp=cp0_dst-jpg&_nc_cat=101&ccb=1-7&_nc_sid=730e14&_nc_ohc=uQApWX2hbI0AX8Ji9o8&_nc_ht=scontent.fpat2-2.fna&oh=00_AfAg76dxtZO4vt_fhq-nU0u7vQDJ22HT9pxaP0fW-cMuvg&oe=6371EFEE" alt="">
-                <img src="https://scontent.fpat2-1.fna.fbcdn.net/v/t39.30808-6/313441773_1764951717213291_8552256118187345891_n.jpg?stp=cp0_dst-jpg&_nc_cat=103&ccb=1-7&_nc_sid=730e14&_nc_ohc=hDI2UHtjq1oAX_eyklM&_nc_ht=scontent.fpat2-1.fna&oh=00_AfA4lO9xaOAZN6LVNINMMKe3uD9QQZ1EsVj39iFaj7N1cg&oe=63721740" alt="">
-                <img src="https://scontent.fbom19-1.fna.fbcdn.net/v/t39.30808-6/314108047_1764951733879956_3173910613140916675_n.jpg?stp=cp0_dst-jpg&_nc_cat=105&ccb=1-7&_nc_sid=730e14&_nc_ohc=N-X6lJ-fgmUAX8MC1zD&_nc_oc=AQm8f5ckPbwZ0P--C5hwnHxq9WnOO7uEUD9ielhYfmQt9U66jqs1lAfXhGo2fqFTngMu6htvSHKLD5_M5Og0sAJ4&_nc_ht=scontent.fbom19-1.fna&oh=00_AfCAQXVRl4j4_Z7EBf77a_TMX3Nujfk9Yds4ZKzvUXKU6w&oe=63725C9D" alt="">
-                <img src="https://scontent.fpat2-3.fna.fbcdn.net/v/t39.30808-6/315256610_1764951757213287_5867011085631492473_n.jpg?stp=cp0_dst-jpg&_nc_cat=111&ccb=1-7&_nc_sid=730e14&_nc_ohc=cxUyxq5Eph4AX9ZJR1y&_nc_ht=scontent.fpat2-3.fna&oh=00_AfA91AMHX9W8gScwC_PxwRIEoUMIXGZljXU1WCdF9qdSKw&oe=63711D70" alt="">
+                <img src="https://i.ibb.co/TrFqdGh/Screenshot-20230301-092343.png" alt="">
+                <img src="https://i.ibb.co/hHtJkvX/Screenshot-20230301-092347.png" alt="">
+                <img src="https://i.ibb.co/4p5QMGv/Screenshot-20230301-092352.png" alt="">
+                <img src="https://i.ibb.co/D7c9Tsz/Screenshot-20230301-092356.png" alt="">
+                <img src="https://i.ibb.co/ZhsFm8k/Screenshot-20230301-092401.png" alt="">
+                <img src="https://i.ibb.co/3hkLqV5/Screenshot-20230301-092406.png" alt="">
             </div>
     </div>
     <div id="c3p">
